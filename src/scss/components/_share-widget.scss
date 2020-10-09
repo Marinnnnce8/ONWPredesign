@@ -1,0 +1,54 @@
+.share-widget {
+	min-width: 90px;
+	overflow: hidden;
+	z-index: 5;
+
+	.uk-position-relative {
+		>svg {
+			color: $blue-light;
+			fill: $blue-light;
+			transform: translateX(-45%);
+		}
+	}
+
+	span {
+		font-size: 9px;
+		font-weight: $light;
+		padding-left: 8px;
+	}
+
+	a {
+		width: 45px;
+		height: 45px;
+		position: relative;
+
+		>svg,
+		&::before {
+			width: 22px;
+			font-size: 22px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&:first-of-type svg {
+			color: $blue-facebook;
+			fill: $blue-facebook;
+		}
+
+		&:nth-of-type(2) svg {
+			color: $blue-twitter;
+			fill: $blue-twitter;
+		}
+
+		&:last-of-type svg {
+			color: $secondary;
+			fill: $secondary;
+		}
+
+		@include hover {
+			opacity: .7;
+		}
+	}
+}

@@ -1,0 +1,49 @@
+.gallery {
+	h2 {
+		margin-top: 0;
+	}
+
+	&-wrap {
+		margin: 0 -2px;
+		overflow: hidden;
+	}
+
+	&-row {
+		display: table;
+		width: 100%;
+	}
+
+	&-image {
+		background-color: $white;
+		border: 2px solid transparent;
+		display: table-cell;
+		margin: 0;
+		outline: none;
+		overflow: hidden;
+		position: relative;
+		vertical-align: top;
+
+		img {
+			height: auto;
+			width: 100%;
+			vertical-align: middle;
+			transition: $speed $timing;
+		}
+
+		@include hover {
+			img {
+				transform: scale(.95);
+			}
+		}
+	}
+
+	.uk-container-expand & {
+		margin: 0 2px;
+	}
+
+	.nb-gallery-caption {
+		font-size: 14px;
+		color: $secondary;
+		font-family: $font-roboto;
+	}
+}

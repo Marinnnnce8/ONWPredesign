@@ -1,0 +1,13 @@
+<{{#if link}}a href="{{link}}"{{else}}button type="button"{{/if}} class="uk-button uk-button-{{default style "default"}}{{#if size}} uk-button-{{size}}{{/if}}{{#if class}} {{class}}{{/if}}">
+{{#if (eq pull "left")}}
+	{{#if icon}}
+		{{> renderIcon name=icon class="icon-left"}}
+	{{/if}}
+	{{label}}
+{{else}}
+	{{label}}
+	{{#if icon}}
+		{{> renderIcon name=icon}}
+	{{/if}}
+{{/if}}
+</{{#if link}}a{{else}}button{{/if}}>

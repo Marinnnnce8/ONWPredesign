@@ -1,0 +1,12 @@
+// 1. Your custom variables and variable overwrites.
+@import '<%= src %>/abstracts/variables';
+
+// 2. Import default variables and available mixins.
+@import '<%= uikit %>/variables-theme';
+@import '<%= uikit %>/mixins-theme';
+
+// 3. Your custom mixin overwrites.
+@import '<%= src %>/abstracts/mixins';
+
+// 4. Import UIkit
+@import '<%= uikit %>/uikit-theme';

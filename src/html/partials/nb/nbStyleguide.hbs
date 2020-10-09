@@ -1,0 +1,319 @@
+<div class='share-widget uk-position-fixed uk-position-left uk-position-center-left uk-visible@s'>
+	<div class='uk-position-relative'>
+		<img class='shape' src='./img/listing-images-frame-bg.svg' data-uk-svg alt='image'>
+		<span>share on</span>
+		<div class='share-widget-links uk-flex uk-flex-column'>
+			<a href='#' aria-label='Visit our Facebook page'>
+				<svg viewBox="0 0 512 512">
+					<use xlink:href="./symbol/icons.svg#facebook"></use>
+				</svg>
+			</a>
+			<a href='#' aria-label='Visit our Twitter page'>
+				<svg viewBox="0 0 512 512">
+					<use xlink:href="./symbol/icons.svg#twitter"></use>
+				</svg>
+			</a>
+			<a href='#' class='font-envelope' aria-label='Contact us via emal'>
+				<svg viewBox="0 0 512 512">
+					<use xlink:href="./symbol/icons.svg#envelope"></use>
+				</svg>
+			</a>
+		</div>
+	</div>
+</div>
+{{#*inline "blocks"}}
+{{#> content}}
+{{#*inline "body"}}
+
+<p>Lorem ipsum dolor sit amet, <strong>here's some bold text</strong>. Aliquam at ligula <em>here's some italic
+		text</em>. Nulla facilisi. In in turpis non eros vehicula adipiscing in <em><strong>feugiat
+			ligula</strong></em>. Vivamus et nulla<sub>2</sub> ultricies<sup>2</sup>, auctor tellus ac, fringilla quam.
+	Pellentesque ut sollicitudin ante. Donec vel adipiscing sapien, at euismod dui. Duis at eros magna <a
+		href="#">example link</a>. Pellentesque nec porttitor dui. Etiam sit amet venenatis enim. Praesent rutrum arcu
+	eget tortor cursus rutrum.</p>
+
+<figure class="align_center hidpi">
+	<a href="{{aws}}/img/owl-image.jpg">
+		<img alt="This is a centre aligned image" src="{{aws}}/img/owl-image.jpg" width="960" />
+	</a>
+	<figcaption>This is a centred image</figcaption>
+</figure>
+
+<h2>Heading h2</h2>
+
+<figure class="align_right hidpi">
+	<a href="{{aws}}/img/placeholder-columns.jpg">
+		<img alt="This is a right aligned image" src="{{aws}}/img/placeholder-columns.300x0-is-hidpi.jpg" width="300" />
+	</a>
+	<figcaption>This is a right-aligned image</figcaption>
+</figure>
+
+<p>Vestibulum ut elit ornare massa tincidunt malesuada eu feugiat diam. Nunc erat nisl, rutrum eget rhoncus nec,
+	fringilla in est. Integer bibendum vel massa consequat sagittis. Duis at consectetur velit. Duis egestas
+	sollicitudin mi at dictum. Aliquam imperdiet, dolor et gravida vestibulum, nulla diam malesuada enim, at pharetra
+	tellus ligula at felis. Nam in massa magna. Ut rhoncus eu justo nec gravida.</p>
+
+<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed vestibulum sodales
+	porttitor. Donec a luctus nisi. Donec facilisis, elit vitae blandit accumsan, orci odio ornare libero, sed mollis
+	urna magna nec mi.</p>
+
+<figure class="align_left hidpi">
+	<a href="{{aws}}/img/placeholder-city.jpg">
+		<img alt="This is a left aligned image" src="{{aws}}/img/placeholder-city.300x0-is-hidpi.jpg" width="300" />
+	</a>
+	<figcaption>This is a left-aligned image</figcaption>
+</figure>
+
+<p>Integer at elementum mi, vitae facilisis purus 4th. Duis quis tellus quis lacus sagittis pharetra a at lorem.
+	Praesent ornare ligula id arcu consequat egestas.</p>
+
+<p>Aliquam at ligula elit gravida placerat. Nulla facilisi. In in turpis non eros vehicula adipiscing in feugiat ligula.
+	Vivamus et nulla ultricies, auctor tellus ac, fringilla quam.</p>
+
+<p>Pellentesque ut sollicitudin ante. This is an <a href="https://www.google.com/" target="_blank"
+		rel="noreferrer noopener">external link</a>. Donec vel adipiscing sapien, at euismod dui. Duis at eros magna
+	example link. Pellentesque nec porttitor dui. Etiam sit amet venenatis enim. Praesent rutrum arcu eget tortor cursus
+	rutrum.</p>
+
+<h3>Heading h3</h3>
+
+<p>Aliquam at ligula elit gravida placerat. Nulla facilisi. In in turpis non eros vehicula adipiscing in feugiat ligula.
+	Vivamus et nulla ultricies, auctor tellus ac, fringilla quam. Pellentesque ut sollicitudin ante. Donec vel
+	adipiscing sapien, at euismod dui. Duis at eros magna example link. Pellentesque nec porttitor dui. Etiam sit amet
+	venenatis enim. Praesent rutrum arcu eget tortor cursus rutrum.</p>
+
+<blockquote>
+	<p>Aliquam at ligula elit gravida placerat. Nulla facilisi. In in turpis non eros vehicula adipiscing in feugiat
+		ligula. Vivamus et nulla ultricies, auctor tellus ac, fringilla quam. Pellentesque ut sollicitudin ante. Donec
+		vel adipiscing sapien, at euismod dui. Duis at eros magna <a href="#">example link</a>. Pellentesque nec
+		porttitor dui. Etiam sit amet venenatis enim. Praesent rutrum arcu eget tortor cursus rutrum.</p>
+</blockquote>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ligula eleifend elit gravida placerat. Nulla
+	facilisi. In in turpis non eros vehicula adipiscing in feugiat ligula. Vivamus et nulla ultricies, auctor tellus ac,
+	fringilla quam. Pellentesque ut sollicitudin ante. Donec vel adipiscing sapien, at euismod dui.</p>
+
+{{/inline}}
+{{/content}}
+
+{{> gallery items=items.gallery title="Gallery" caption="A Gallery Caption"}}
+
+{{#> content}}
+{{#*inline "body"}}
+
+<h4>Heading h4</h4>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ligula eleifend elit gravida placerat. Nulla
+	facilisi. In in turpis non eros vehicula adipiscing in feugiat ligula. Vivamus et nulla ultricies, auctor tellus ac,
+	fringilla quam. Pellentesque ut sollicitudin ante. Donec vel adipiscing sapien, at euismod dui. Duis at eros magna.
+	Pellentesque nec porttitor dui. Etiam sit amet venenatis enim. Praesent rutrum arcu eget tortor cursus rutrum.</p>
+
+<ul>
+	<li><a href="{{aws}}/files/test.pdf">PDF File</a> - Download now!</li>
+	<li><a href="{{aws}}/files/test.docx">Word Document</a></li>
+	<li><a href="{{aws}}/files/test.xlsx">Excel Spreadsheet</a></li>
+	<li><a href="{{aws}}/files/test.pptx">Powerpoint Presentation</a></li>
+	<li><a href="{{aws}}/files/test.zip">Zip File</a></li>
+</ul>
+
+<ul>
+	<li>A non-linked list</li>
+	<li>A non-linked list</li>
+	<li>A non-linked list</li>
+</ul>
+
+<ol>
+	<li><a href="#">A list of ordered links</a> - a link with some further text</li>
+	<li><a href="#">A list of ordered links</a></li>
+	<li><a href="#">A list of ordered links</a></li>
+</ol>
+
+{{/inline}}
+{{/content}}
+
+{{> slideshow items=items.slideshow title="Slideshow"}}
+
+{{#> content}}
+{{#*inline "body"}}
+
+<h5>Heading h5</h5>
+
+<p>Donec facilisis, elit vitae blandit accumsan, orci odio ornare libero, sed mollis urna magna nec mi. Integer at
+	elementum mi, vitae facilisis purus 4th. Duis quis tellus quis lacus sagittis pharetra a at lorem. Praesent ornare
+	ligula id arcu consequat egestas.</p>
+
+<h6>Heading h6</h6>
+
+<p>Ellentesque ut sollicitudin ante. Donec vel adipiscing sapien, at euismod dui. Duis at eros magna. Pellentesque nec
+	porttitor dui. Etiam sit amet venenatis enim. Praesent rutrum arcu eget tortor cursus rutrum.</p>
+
+<h2>Table</h2>
+
+<table>
+	<thead>
+		<tr>
+			<th>Column 1</th>
+			<th>Column 2</th>
+			<th>Column 3</th>
+			<th>Column 4</th>
+			<th>Column 5</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Row 1</td>
+			<td>Lorem</td>
+			<td>&pound;99.99</td>
+			<td>Lorem</td>
+			<td>07:00 - 23:00</td>
+		</tr>
+		<tr>
+			<td>Row 2</td>
+			<td>Lorem</td>
+			<td>&pound;99.99</td>
+			<td>Lorem</td>
+			<td>07:00 - 23:00</td>
+		</tr>
+		<tr>
+			<td>Row 3</td>
+			<td>Lorem</td>
+			<td>&pound;99.99</td>
+			<td>Lorem</td>
+			<td>07:00 - 23:00</td>
+		</tr>
+		<tr>
+			<td>Row 4</td>
+			<td>Lorem</td>
+			<td>&pound;99.99</td>
+			<td>Lorem</td>
+			<td>07:00 - 23:00</td>
+		</tr>
+	</tbody>
+</table>
+
+<p class="uk-text-small">*This is some small text</p>
+
+<h2>Messages</h2>
+
+<p class="uk-alert uk-alert-primary"><strong>Primary Text.</strong> This text is a message to the website user</p>
+
+<p class="uk-alert uk-alert-success"><strong>Success Text.</strong> This text is providing a positive message to the
+	user</p>
+
+<p class="uk-alert uk-alert-warning"><strong>Warning Text.</strong> The text is providing a gentle warning to the user
+</p>
+
+<p class="uk-alert uk-alert-danger"><strong>Danger Text.</strong> The text is providing an error alert to the user</p>
+
+<h3>Embedded Videos</h3>
+
+<div class="responsive yt">
+	<iframe width="1280" height="720"
+		src="https://www.youtube-nocookie.com/embed/ScMzIvxBSi4?modestbranding=1&rel=0&feature=oembed" frameborder="0"
+		allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<div class="responsive vm">
+	<iframe src="https://player.vimeo.com/video/63655754?dnt=1&app_id=122963" width="1280" height="720" frameborder="0"
+		allow="autoplay; fullscreen" allowfullscreen title="Placeholder visual blip"></iframe>
+</div>
+
+{{/inline}}
+{{/content}}
+
+{{#> content}}
+{{#*inline "body"}}
+
+<h3>Buttons</h3>
+
+{{#> ukGrid class="uk-grid-medium uk-child-width-1-3@s"}}
+{{#*inline "cells"}}
+
+<div>
+	<div class="uk-text-meta uk-form-label">Primary</div>
+	{{> ukButton label=cta style="primary"}}
+	<div class="uk-text-meta uk-form-label uk-margin-top">Primary Small</div>
+	{{> ukButton label=cta style="primary" size="small"}}
+	<div class="uk-text-meta uk-form-label uk-margin-top">Primary Large</div>
+	{{> ukButton label=cta style="primary" size="large"}}
+</div>
+
+<div>
+	<div class="uk-text-meta uk-form-label">Secondary</div>
+	{{> ukButton label=cta style="secondary"}}
+	<div class="uk-text-meta uk-form-label uk-margin-top">Secondary Small</div>
+	{{> ukButton label=cta style="secondary" size="small"}}
+	<div class="uk-text-meta uk-form-label uk-margin-top">Secondary Large</div>
+	{{> ukButton label=cta style="secondary" size="large"}}
+</div>
+
+<div>
+	<div class="uk-text-meta uk-form-label">Default</div>
+	{{> ukButton label=cta}}
+	<div class="uk-text-meta uk-form-label uk-margin-top">Default Small</div>
+	{{> ukButton label=cta size="small"}}
+	<div class="uk-text-meta uk-form-label uk-margin-top">Default Large</div>
+	{{> ukButton label=cta size="large"}}
+</div>
+
+{{/inline}}
+{{/ukGrid}}
+
+<h3>Other Button Styles</h3>
+
+{{#> ukGrid class="uk-grid-medium uk-child-width-1-3@s"}}
+{{#*inline "cells"}}
+
+<div>
+	<div class="uk-text-meta uk-form-label">Danger</div>
+	{{> ukButton label=cta style="danger"}}
+</div>
+
+<div>
+	<div class="uk-text-meta uk-form-label">Text Normal</div>
+	{{> ukButton label=cta style="text"}}
+</div>
+
+<div>
+	<div class="uk-text-meta uk-form-label">Text Large</div>
+	{{> ukButton label=cta style="text" class="uk-text-large"}}
+</div>
+
+{{/inline}}
+{{/ukGrid}}
+
+{{/inline}}
+{{/content}}
+
+{{#> nbForm}}
+{{#*inline "form"}}
+
+<form id="nb-form-{{page.name}}" class="uk-form-stacked uk-width-2-3@s uk-width-3-5@m InputfieldForm" method="post"
+	data-uk-nb-form novalidate data-colspacing="1">
+
+	<h3>Form Styles</h3>
+
+	{{#> ukGrid class="uk-grid-small"}}
+	{{#*inline "cells"}}
+
+	{{> nbInput label="Your Name" name="name" title="Please enter your name"}}
+
+	{{> nbInput label="Email Address" name="email" type="email" title="Please enter a valid email address"}}
+
+	{{> nbInput label="Telephone" name="tel" type="tel"}}
+
+	{{> nbInput label="Your Enquiry" name="enquiry" type="textarea" title="Please enter your enquiry"}}
+
+	{{> nbInput name="submit" type="submit" value="Send"}}
+
+	{{/inline}}
+	{{/ukGrid}}
+
+</form>
+
+{{/inline}}
+{{/nbForm}}
+
+{{/inline}}
+
+{{> templatePage}}

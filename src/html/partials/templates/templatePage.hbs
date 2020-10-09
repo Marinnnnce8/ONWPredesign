@@ -1,0 +1,16 @@
+{{#> main}}
+	{{#*inline "main"}}
+
+	<div class="uk-margin-top">
+
+		{{> renderIntro}}
+
+		{{#> ukGrid class="uk-child-width-1-1"}}
+			{{#*inline "cells"}}
+			{{#> blocks}}{{/blocks}}
+			{{/inline}}
+		{{/ukGrid}}
+	</div>
+
+	{{/inline}}
+{{/main}}

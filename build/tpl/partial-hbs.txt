@@ -1,0 +1,7 @@
+<div class="<%= name %>">
+	{{#> ukContainer size=(default size (default page.ukContainer ukContainer))}}
+		{{#*inline "out"}}
+
+		{{/inline}}
+	{{/ukContainer}}
+</div>

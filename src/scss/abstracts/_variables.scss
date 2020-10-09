@@ -1,0 +1,101 @@
+//
+// Main
+//
+// ========================================================================
+
+//
+// Typography
+//
+
+// Family
+$font-default: 'Ubuntu', sans-serif;
+$font-condensed: 'Ubuntu Condensed', sans-serif;
+$font-roboto: 'Roboto', sans-serif;
+
+// Size
+$font-size: 18px;
+
+// Weight
+$bold: 700;
+$semi-bold: 600;
+$medium: 500;
+$light: 300;
+
+// Style
+$italic: italic;
+
+// Line Height
+$line-height: 1.5;
+
+
+//
+// Colours
+//
+$white: #fff;
+$black: #241d1e;
+$primary: #ff8813;
+$secondary: #4b351c;
+$ochre: #f6ea8b;
+$ochre-dark: #c3ba6d;
+$brown-medium: #8b837b;
+// $orange: #ff8813;
+// $brown: #4b351c;
+$brown-dark: #3d2a15;
+$brick: #c75300;
+$brick-dark: #bb5604;
+$blue-light: #dce7f3;
+$blue-facebook: #3d599c;
+$blue-twitter: #1c9ccf;
+$blue-ice: #d7dadb;
+$blue-sky: #bdd0e4;
+$gray: #bec0c1;
+$gray-alt: #b1b2b4;
+$gray-soft: #71675e;
+$gray-ice: #dcd8d3;
+$gray-medium: #c5c1bc;
+$green: #7c662a;
+$green-alt: #9a831f;
+$green-dark: #705f26;
+$green-dark-alt: #87741c;
+$green-golden: #9e8f20;
+$red: #ea4335;
+$success: #32d296;
+$warning: #faa05a;
+$danger: #f0506e;
+$grey: lighten($black, 32%);
+$light-grey: lighten($grey, 32%);
+$off-white: lighten($light-grey, 20%);
+
+$site-colors: (
+	'black': $black,
+	'white': $white,
+	'ochre': $ochre,
+	'orange': $primary,
+	'brown': $secondary,
+	'blue-light': $blue-light,
+	'gray': $gray,
+	'green': $green
+) !default;
+
+
+//
+// Other
+//
+
+// Animation
+$speed: 256ms;
+$speed-fast: $speed / 2;
+$speed-slow: $speed * 2;
+$timing: ease-in-out;
+
+
+//
+// UIkit Global Variables
+// https://github.com/uikit/uikit/blob/develop/src/scss/components/variables.scss
+//
+// Imports UIkit variable overrides for the theme
+// These may be used by main.scss
+//
+// ========================================================================
+
+@import 'uikit/variables';

@@ -1,0 +1,20 @@
+<ul class='uk-navbar-nav' data-uk-nb-nav='back: Back'>
+{{#each menu}}
+	{{#with this}}
+	<li class="{{#if children}}uk-parent{{/if}}{{#if (eq ../page.name name)}} uk-active{{/if}}">
+		<a href='{{default url "#"}}'>{{title}}</a>
+		{{#if children}}
+		<ul class='uk-nav' id="nav-{{ida title}}">
+		{{#each children}}
+			{{#with this}}
+			<li>
+				<a href="{{default url "#"}}">{{title}}</a>
+			</li>
+			{{/with}}
+		{{/each}}
+		</ul>
+		{{/if}}
+	</li>
+	{{/with}}
+{{/each}}
+</ul>

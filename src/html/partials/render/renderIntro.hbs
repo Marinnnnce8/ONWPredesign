@@ -1,0 +1,9 @@
+{{#if page.intro}}
+	{{#> ukContainer size=(default page.ukContainer ukContainer)}}
+		{{#*inline "out"}}
+		<div>
+			<p class="uk-text-lead">{{page.intro}}</p>
+		</div>
+		{{/inline}}
+	{{/ukContainer}}
+{{/if}}

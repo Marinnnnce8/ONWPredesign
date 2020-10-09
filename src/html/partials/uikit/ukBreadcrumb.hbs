@@ -1,0 +1,17 @@
+<ul class="uk-breadcrumb">
+	<li>
+		<a href="home.html">Home</a>
+	</li>
+{{#if page.breadcrumbs}}
+{{#each page.breadcrumbs}}
+	{{#with this}}
+	<li>
+		<a href='{{default url "#"}}'>{{title}}</a>
+	</li>
+	{{/with}}
+{{/each}}
+{{/if}}
+	<li>
+		<span>{{page.title}}</span>
+	</li>
+</ul>

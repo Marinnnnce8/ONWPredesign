@@ -1,0 +1,25 @@
+<div class="Inputfield {{default class "uk-width-1-1"}}{{#if title}} nb-form-required{{/if}}" id="wrap_nb-form-{{page.name}}_{{name}}">
+
+{{#if label}}
+	<label class="uk-form-label" for="nb-form-{{page.name}}_{{name}}">{{label}}</label>
+{{/if}}
+
+	<div class="nb-form-content">
+		<div role="alert"></div>
+		{{#if (eq type "textarea")}}
+
+		<textarea id="nb-form-{{page.name}}_{{name}}" class="uk-textarea" name="{{name}}" rows="{{default rows "9"}}" {{#if title}}title="{{title}}" required{{/if}}></textarea>
+
+		{{else}}
+		{{#if (eq type "submit")}}
+
+		<button id="nb-form-{{page.name}}_{{name}}" class="uk-button uk-button-{{default style "primary"}}" name="{{name}}" value="{{value}}" type="{{type}}">{{value}}</button>
+
+		{{else}}
+
+		<input id="nb-form-{{page.name}}_{{name}}" class="uk-input" name="{{name}}" type="{{default type "text"}}" {{#if title}}title="{{title}}" required{{else}}placeholder="Optional"{{/if}}>
+
+		{{/if}}
+		{{/if}}
+	</div>
+</div>

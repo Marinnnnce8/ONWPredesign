@@ -1,0 +1,126 @@
+{
+	"nb": {
+		"siteName": "Orkney Native Wildlife Project",
+		"clientName": "RSPB Orkney Native Wildlife Project"
+	},
+	"ukContainer": "small",
+	"cta": "Find out more",
+	"menu": [
+		{
+			"name": "home",
+			"title": "Home",
+			"url": "home.html"
+		},
+		{
+			"name": "about",
+			"title": "About",
+			"children": [
+				{
+					"name": "child",
+					"title": "Child"
+				}
+			]
+		},
+		{
+			"name": "contact",
+			"title": "Contact"
+		}
+	],
+	"social": [
+		{
+			"name": "facebook",
+			"url": "https://www.facebook.com/"
+		},
+		{
+			"name": "twitter",
+			"url": "https://twitter.com/"
+		}
+	],
+	"legal": [
+		"Terms & Conditions",
+		"Privacy Policy",
+		"Disclaimer"
+	],
+	"items": {
+		"children": {
+			"children": [
+				{
+					"title": "About",
+					"url": "#",
+					"getImage": "https://aws.nbcommunication.com/template/img/placeholder-beach.jpg",
+					"getSummary": "To best optimise the page and provide the visitor with useful and informative text, it would be good to have a sentence or two included here."
+				},
+				{
+					"title": "Contact",
+					"url": "#",
+					"getImage": "https://aws.nbcommunication.com/template/img/placeholder-bridge.jpg",
+					"getSummary": "To best optimise the page and provide the visitor with useful and informative text, it would be good to have a sentence or two included here."
+				},
+				{
+					"title": "Styleguide",
+					"url": "styleguide.html",
+					"getImage": "https://aws.nbcommunication.com/template/img/placeholder-city.jpg",
+					"getSummary": "To best optimise the page and provide the visitor with useful and informative text, it would be good to have a sentence or two included here."
+				}
+			]
+		},
+		"posts": {
+			"config": {
+				"cta": "Read more"
+			},
+			"post": [
+				{
+					"title": "News Post 1",
+					"url": "#",
+					"date_pub": "April 20th 2020",
+					"getImage": "https://aws.nbcommunication.com/template/img/placeholder-columns.jpg",
+					"getSummary": "To best optimise the page and provide the visitor with useful and informative text, it would be good to have a sentence or two included here."
+				},
+				{
+					"title": "News Post 2",
+					"url": "#",
+					"date_pub": "April 17th 2020",
+					"getImage": "https://aws.nbcommunication.com/template/img/placeholder-skyscrapers.jpg",
+					"getSummary": "To best optimise the page and provide the visitor with useful and informative text, it would be good to have a sentence or two included here."
+				},
+				{
+					"title": "News Post 3",
+					"url": "#",
+					"date_pub": "April 1st 2020",
+					"getImage": "https://aws.nbcommunication.com/template/img/placeholder-sprinkler.jpg",
+					"getSummary": "To best optimise the page and provide the visitor with useful and informative text, it would be good to have a sentence or two included here."
+				}
+			]
+		},
+		"gallery": [
+			[
+				{
+					"href": "https://aws.nbcommunication.com/template/img/placeholder-columns.jpg",
+					"src": "https://aws.nbcommunication.com/template/img/placeholder-columns.0x768.jpg",
+					"alt": "This gallery image has a caption.",
+					"caption": "This gallery image has a caption."
+				},
+				{
+					"href": "https://aws.nbcommunication.com/template/img/placeholder-skyscrapers.jpg",
+					"src": "https://aws.nbcommunication.com/template/img/placeholder-skyscrapers.0x768.jpg"
+				}
+			],
+			[
+				{
+					"href": "https://aws.nbcommunication.com/template/img/placeholder-sprinkler.jpg",
+					"src": "https://aws.nbcommunication.com/template/img/placeholder-sprinkler.0x768.jpg"
+				},
+				{
+					"href": "https://aws.nbcommunication.com/template/img/placeholder-town.jpg",
+					"src": "https://aws.nbcommunication.com/template/img/placeholder-town.0x768.jpg",
+					"alt": "This gallery image also has a caption with HTML.",
+					"caption": "This <em>gallery</em> image also has a <strong>caption</strong> with HTML."
+				},
+				{
+					"href": "https://aws.nbcommunication.com/template/img/placeholder-waterfall.jpg",
+					"src": "https://aws.nbcommunication.com/template/img/placeholder-waterfall.0x768.jpg"
+				}
+			]
+		]
+	}
+}

@@ -1,0 +1,39 @@
+&-cookie {
+	left: 0;
+	margin: 0;
+	top: 0;
+	width: 100%;
+
+	.uk-notification-message {
+		background-color: $black;
+		color: $white;
+		font-size: 16px;
+
+		.uk-button {
+			color: $white;
+			margin: 5px 0;
+
+			&:last-child {
+				margin-left: 5px;
+			}
+		}
+
+		.uk-notification-close {
+			display: none;
+		}
+	}
+
+	&-setting {
+
+		.uk-radio {
+
+			&[value='1']:checked {
+				background-color: $primary;
+			}
+
+			&[value='0']:checked {
+				background-color: adjust-hue($primary, 160deg);
+			}
+		}
+	}
+}

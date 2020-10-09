@@ -1,0 +1,199 @@
+.links-section {
+    position: relative;
+    padding-top: 100px;
+
+    .shape {
+        top: -5px;
+        width: calc(100% - 18px);
+        left: 16px;
+        color: $blue-ice;
+        fill: $blue-ice;
+    }
+
+    &.gateway {
+        padding-top: 0;
+        padding-bottom: 70px;
+    }
+
+    &.news {
+        padding: 90px 50px 175px;
+
+        ul {
+            margin-bottom: 50px;
+        }
+
+        >.shape {
+            color: $secondary;
+            fill: $secondary;
+            width: calc(100% - 80px);
+            left: 50%;
+            transform: translateX(-50.2%);
+        }
+
+        .uk-button {
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    &.involve {
+        padding: 285px 50px 100px;
+        margin-top: -265px;
+
+        .links-inner {
+            clip-path: url('#svgPathGetInvolved');
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50px;
+            width: calc(100% - 100px);
+
+            &::after {
+                position: absolute;
+                background-color: rgba($green-dark-alt, .8);
+                left: 0;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                content: '';
+            }
+
+            @supports (mix-blend-mode: multiply) {
+                &::after {
+                    mix-blend-mode: multiply;
+                    background-color: $green-dark-alt;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-xlarge) {
+        &.news>.shape {
+            width: calc(100% - 68px);
+        }
+
+        &.involve .links-inner {
+            left: 41px;
+            width: calc(100% - 84px);
+        }
+    }
+
+    @media (max-width: $breakpoint-large) {
+        padding-top: 90px;
+
+        &.news>.shape {
+            width: calc(100% - 61px);
+        }
+
+        &.involve .links-inner {
+            top: -130px;
+            left: 37px;
+            width: calc(100% - 74px);
+            z-index: -1;
+        }
+    }
+
+    @media (max-width: $breakpoint-medium) {
+        &.news>.shape {
+            width: calc(100% - 54px);
+        }
+
+        &.involve {
+            padding: 220px 50px 100px;
+            margin-top: -250px;
+
+            .links-inner {
+                left: 32px;
+                width: calc(100% - 64px);
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-small) {
+        padding-top: 110px;
+
+        &.news {
+            padding: 45px 15px 270px;
+
+            >.shape {
+                width: calc(100% - 42px);
+                left: 49.7%;
+            }
+        }
+
+        &.involve {
+            padding: 220px 15px 100px;
+            margin-top: -210px;
+
+            .links-inner {
+                top: -455px;
+                left: 23px;
+                width: calc(100% - 46px);
+            }
+        }
+
+        .shape {
+            width: 100%;
+            left: 0;
+        }
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        &.news>.shape {
+            width: calc(100% - 33px);
+            left: 49.5%;
+        }
+
+        &.involve .links-inner {
+            left: 16px;
+            width: calc(100% - 35px);
+        }
+    }
+}
+
+.links-text {
+    max-width: 660px;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+
+    h2 {
+        font-size: 57px;
+        margin-bottom: 30px;
+        color: $white;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    @media (max-width: $breakpoint-large) {
+        max-width: 580px;
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin: 10px 0 40px;
+        }
+    }
+
+    @media (max-width: $breakpoint-small) {
+        h2 {
+            font-size: 44px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    }
+}
+
+.gateway {
+
+    .link-box,
+    .uk-card-body {
+        background-color: $blue-light;
+    }
+}

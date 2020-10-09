@@ -1,0 +1,45 @@
+.shape {
+	width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+	height: 100%;
+	z-index: -1;
+}
+
+.nb-no-hero {
+
+	h1 {
+		color: $secondary;
+		margin-top: 200px;
+	}
+}
+
+// Theming and colors iterator
+@each $colors-name in $site-colors {
+    $name: nth($colors-name, 1);
+    $color: nth($colors-name, 2);
+
+    .bg-#{$name} {
+        background-color: $color;
+    }
+
+    .color-#{$name} {
+        color: $color;
+    }
+
+    .svg-bg-#{$name} {
+        >svg {
+            color: $color;
+            fill: $color;
+        }
+    }
+
+    .info-color-#{$name} {
+
+        span,
+        p {
+            color: $color;
+        }
+    }
+}

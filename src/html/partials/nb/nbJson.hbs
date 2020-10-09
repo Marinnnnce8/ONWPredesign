@@ -1,0 +1,8 @@
+<div>
+	<div class="nb-json" id="{{#if id}}{{id}}{{else}}items-{{page.name}}{{/if}}" data-uk-nb-json='{{jsonRender data}}'></div>
+	{{#if data.config.loadMore}}
+		<div class="uk-text-center uk-margin-large-top nb-json-more">
+			{{> ukButton label="Load More" style="primary"}}
+		</div>
+	{{/if}}
+</div>

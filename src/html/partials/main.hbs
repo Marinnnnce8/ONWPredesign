@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en-gb" class="template-{{page.template.name}}" data-load-components="{{loadComponents}}">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="format-detection" content="telephone=no">
+
+	<title>{{page.meta_title}}</title>
+
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link rel="stylesheet" href="css/uikit-theme.min.css" />
+	<link rel="stylesheet" href="css/main.min.css" />
+</head>
+
+<body>
+
+	<header class="header" data-uk-sticky="media: 960; animation: uk-animation-slide-top; show-on-up: true;">
+		<nav class="uk-navbar-container uk-navbar" data-uk-navbar>
+
+			<div class="uk-navbar-left">
+				<a href="/" class="uk-navbar-item uk-logo">
+					<img src="{{logo}}" alt="{{nb.siteName}} Logo">
+				</a>
+			</div>
+
+			{{#if menu}}
+			<div class="uk-navbar-right">
+				<div id="nav">
+					{{> renderNavigation }}
+				</div>
+				<a href="#nav" class="uk-navbar-toggle" data-uk-toggle="animation: uk-animation-slide-left;"
+					aria-label="Toggle Navigation" hidden>
+					<span data-uk-navbar-toggle-icon></span>
+				</a>
+			</div>
+			{{/if}}
+
+		</nav>
+	</header>
+
+	<main class="uk-margin-bottom">
+
+		{{#if page.banner}}
+		{{> banner}}
+		{{else}}
+		{{#> ukContainer size=(default page.ukContainer ukContainer) class="uk-margin-top"}}
+		{{#*inline "out"}}
+		<h1>{{page.h1}}</h1>
+		{{> ukBreadcrumb }}
+		{{/inline}}
+		{{/ukContainer}}
+		{{/if}}
+
+		{{#> main }}{{/main}}
+
+	</main>
+
+	<footer class="footer uk-position-relative">
+		<img class="uk-visible@l" src="./img/bird-intro.png" data-uk-img alt="image">
+		{{#> ukContainer}}
+		{{#*inline "out"}}
+		<div class="uk-flex uk-flex-between">
+			<div class="footer-left">
+				<div class="uk-flex uk-flex-between uk-flex-wrap">
+					<div class="faq">
+						<h2>Please feel free to contact us if you have any questions.</h2>
+						<a href='#' class='uk-button uk-button-secondary uk-button-large'>
+							View all <abbr title="frequently asked questions">FAQs</abbr></a>
+					</div>
+					<div class="address">
+						<h3 class="uk-text-bold">Address</h3>
+						<ul class="uk-list">
+							<li>Orkney Native Wildlife Project</li>
+							<li>H24 Garison Road</li>
+							<li>Hatston, Kirkwall</li>
+							<li>Orkney, KW15 1GN</li>
+							<li>United Kingdom</li>
+						</ul>
+					</div>
+					<div class="footer-right uk-hidden@m">
+						<div>
+							<h3 class="uk-text-bold">General Enquiries:</h3>
+							<ul class="uk-list">
+								<li>
+									<a class='uk-button uk-button-text uk-margin-remove-bottom'
+										href='tel:+4401856881451'>+44(0) 1856
+										881451</a>
+								</li>
+								<li class="uk-margin-remove-top">
+									<a class='uk-button uk-button-text'
+										href='mailto:info@onwp.org.uk'>info@onwp.org.uk</a>
+								</li>
+							</ul>
+
+							<h3 class="uk-text-bold">Media enquiries:</h3>
+							<a class='uk-button uk-button-text' href='mailto:media@onwp.org.uk'>media@onwp.org.uk</a>
+						</div>
+						<a href='#'><strong>Follow us on:</strong> <i data-uk-icon='icon: facebook'></i>
+							<span>Facebook</span></a>
+					</div>
+				</div>
+				<div>
+					<span class="uk-text-lead">Protecting our native wildlife together:</span>
+					<ul class="uk-flex uk-list uk-flex-wrap">
+						<li><a href="#" aria-label="Click to find out more"><img src="./img/rspb-logo.png" data-uk-img
+									alt="image"></a></li>
+						<li class="uk-margin-remove-top"><a href="#" aria-label="Click to find out more"><img
+									src="./img/nature-scot-logo.png" data-uk-img alt="image"></a></li>
+						<li class="uk-margin-remove-top"><a href="#" aria-label="Click to find out more"><img
+									src="./img/oic-logo.png" data-uk-img alt="image"></a></li>
+						<li class="uk-margin-remove-top"><a href="#" aria-label="Click to find out more"><img
+									src="./img/hf-logo.png" data-uk-img alt="image"></a></li>
+						<li class="uk-margin-remove-top"><a href="#" aria-label="Click to find out more"><img
+									src="./img/life-logo.png" data-uk-img alt="image"></a></li>
+						<li class="uk-margin-remove-top"><a href="#" aria-label="Click to find out more"><img
+									src="./img/natura-logo.png" data-uk-img alt="image"></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-right uk-visible@m">
+				<div>
+					<h3 class="uk-text-bold">General Enquiries:</h3>
+					<ul class="uk-list">
+						<li>
+							<a class='uk-button uk-button-text uk-margin-remove-bottom' href='tel:+4401856881451'>+44(0)
+								1856
+								881451</a>
+						</li>
+						<li class="uk-margin-remove-top">
+							<a class='uk-button uk-button-text' href='mailto:info@onwp.org.uk'>info@onwp.org.uk</a>
+						</li>
+					</ul>
+
+					<h3 class="uk-text-bold">Media enquiries:</h3>
+					<a class='uk-button uk-button-text' href='mailto:media@onwp.org.uk'>media@onwp.org.uk</a>
+				</div>
+				<a href='#'><strong>Follow us on:</strong> <i data-uk-icon='icon: facebook'></i>
+					<span>Facebook</span></a>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			{{#if legal}}
+			<ul class='uk-flex legal uk-list uk-flex-wrap'>
+				<li class='copyright uk-padding-remove-left'>
+					Copyright &copy; {{year}} {{nb.clientName}}. All rights reserved.</li>
+				{{#each legal}}
+				<li class="uk-margin-remove-top">
+					<a href="#">{{this}}</a>
+				</li>
+				{{/each}}
+				<li class="watermark uk-margin-remove-top">
+					Website by <a title="NB Communication - Digital Marketing Agency" target="_blank" rel="noopener"
+						href="https://www.nbcommunication.com/">NB <img src="{{{blankPixel}}}"
+							data-src="https://brand.nbcommunication.com/logo/web/nb.png" alt="NB Communication Ltd Logo"
+							data-uk-img></a>
+				</li>
+			</ul>
+			{{/if}}
+			<span>The Royal Society for the Protection of Birds (RSPB) is a registered charity: England and
+				Wales no.
+				207076, Scotland no. SC037654
+			</span>
+		</div>
+		{{/inline}}
+		{{/ukContainer}}
+	</footer>
+
+	<script src="js/svgxuse.min.js"></script>
+	<script src="js/uikit-core.min.js"></script>
+	<script src="js/nbkit.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

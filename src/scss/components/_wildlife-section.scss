@@ -1,0 +1,227 @@
+.wildlife-section {
+    position: relative;
+    padding-top: 120px;
+    margin-top: -170px;
+
+    >.shape {
+        width: calc(100% - 83px);
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50.1%);
+        color: $green-alt;
+        fill: $green-alt;
+    }
+
+    @media (max-width: $breakpoint-xlarge) {
+        >.shape {
+            width: calc(100% - 70px);
+        }
+    }
+
+    @media (max-width: $breakpoint-large) {
+        >.shape {
+            width: calc(100% - 62px);
+        }
+    }
+
+    @media (max-width: $breakpoint-medium) {
+        padding-top: 180px;
+
+        >.shape {
+            width: calc(100% - 54px);
+            left: 50.1%;
+        }
+    }
+
+    @media (max-width: $breakpoint-small) {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: -215px;
+
+        >.shape {
+            width: calc(100% - 43px);
+            left: 49.7%;
+        }
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+        >.shape {
+            width: calc(100% - 34px);
+            left: 49.5%;
+        }
+    }
+}
+
+.wildlife-inner {
+    padding: 15px 65px;
+    position: relative;
+
+    @media (max-width: $breakpoint-medium) {
+        padding: 15px 60px;
+    }
+
+    @media (max-width: $breakpoint-small) {
+        padding: 15px;
+    }
+}
+
+.wildlife-box {
+    max-height: 335px;
+    height: 100%;
+
+    .uk-background-cover {
+        height: 335px;
+    }
+
+    &:nth-of-type(3),
+    &:nth-of-type(4) {
+        margin-top: -25px;
+    }
+
+    &:first-of-type {
+        clip-path: url('#svgPathWildlifeTopLeft');
+    }
+
+    &:nth-of-type(2) {
+        clip-path: url('#svgPathWildlifeTopRight');
+        max-height: 376px;
+        top: -42px;
+        position: relative;
+
+        .uk-background-cover {
+            height: 376px;
+        }
+    }
+
+    &:nth-of-type(3) {
+        clip-path: url('#svgPathWildlifeBottomLeft');
+        width: 48.5%;
+    }
+
+    &:last-of-type {
+        clip-path: url('#svgPathWildlifeBottomRight');
+    }
+
+    @media (max-width: $breakpoint-medium) {
+        max-height: 200px;
+
+        &:nth-of-type(3),
+        &:nth-of-type(4) {
+            margin-top: -10px;
+        }
+
+        &:nth-of-type(2) {
+            max-height: 225px;
+            top: -27px;
+
+            .uk-background-cover {
+                height: 225px;
+            }
+        }
+
+        &:nth-of-type(3) {
+            width: 50%;
+        }
+
+        .uk-background-cover {
+            height: 200px;
+        }
+    }
+
+    @media (max-width: $breakpoint-small) {
+        max-height: 145px;
+
+        &:nth-of-type(3),
+        &:nth-of-type(4) {
+            margin-top: -5px;
+        }
+
+        &:nth-of-type(2) {
+            max-height: 162px;
+            top: -19px;
+
+            .uk-background-cover {
+                height: 162px;
+            }
+        }
+
+        .uk-background-cover {
+            height: 145px;
+        }
+    }
+}
+
+.wildlife-text {
+    max-width: 660px;
+    padding: 0 40px 45px;
+    z-index: 1;
+    text-align: center;
+
+    .shape {
+        color: $primary;
+        fill: $primary;
+        transition: $speed $timing;
+    }
+
+    h2,
+    p,
+    span {
+        color: $white;
+    }
+
+    h2 {
+        font-size: 44px;
+    }
+
+    p {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .uk-button {
+        &::after {
+            background-color: $white;
+        }
+    }
+
+    @include hover {
+        .shape {
+            color: $brick-dark;
+            fill: $brick-dark;
+        }
+    }
+
+    @media (max-width: $breakpoint-medium) {
+        position: relative !important; // sass-lint:disable-line no-important
+        top: auto;
+        transform: none;
+        left: auto;
+        margin-bottom: 70px;
+        padding: 10px 40px 50px;
+        max-width: 100%;
+
+        h2 {
+            margin-bottom: 0;
+        }
+
+        p {
+            margin-top: 15px;
+        }
+    }
+
+    @media (max-width: $breakpoint-small) {
+        padding: 10px 20px 50px;
+
+        h2 {
+            font-size: 44px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .uk-button span {
+            min-width: 280px;
+        }
+    }
+}

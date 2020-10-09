@@ -1,0 +1,19 @@
+&-json {
+
+	> [data-uk-scrollspy] {
+
+		> div {
+
+			.uk-card {
+				opacity: 0;
+			}
+
+			&.uk-scrollspy-inview {
+
+				.uk-card {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

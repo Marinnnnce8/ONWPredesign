@@ -1,0 +1,156 @@
+//
+// Breakpoints
+//
+$breakpoint-small: 640px;
+$breakpoint-medium: 960px;
+$breakpoint-large: 1200px;
+$breakpoint-xlarge: 1600px;
+$breakpoint-xsmall-max: ($breakpoint-small - 1);
+$breakpoint-small-max: ($breakpoint-medium - 1);
+$breakpoint-medium-max: ($breakpoint-large - 1);
+$breakpoint-large-max: ($breakpoint-xlarge - 1);
+$breakpoint-mobile: 479px; // Custom
+
+
+//
+// Global Variables
+//
+
+// Typography
+$global-font-family: $font-default;
+$global-font-size: $font-size;
+$global-line-height: $line-height;
+$global-2xlarge-font-size: 2.625rem;
+$global-xlarge-font-size: 2rem;
+$global-large-font-size: 1.5rem;
+$global-medium-font-size: 1.25rem;
+$global-small-font-size: 0.875rem;
+
+// Colors
+$global-color: $black;
+$global-emphasis-color: $black;
+$global-muted-color: $grey;
+$global-link-color: $primary;
+$global-link-hover-color: $primary;
+$global-inverse-color: $white;
+
+// Backgrounds
+$global-background: $white;
+$global-muted-background: $off-white;
+$global-primary-background: $primary;
+$global-secondary-background: $secondary;
+$global-success-background: $success;
+$global-warning-background: $warning;
+$global-danger-background: $danger;
+
+// Borders
+$global-border-width: 1px;
+$global-border: $light-grey;
+
+// Spacings
+$global-margin: 20px;
+$global-small-margin: 10px;
+$global-medium-margin: 40px;
+$global-large-margin: 70px;
+$global-xlarge-margin: 135px;
+$global-gutter: 30px;
+$global-small-gutter: 15px;
+$global-medium-gutter: 40px;
+$global-large-gutter: 70px;
+
+// Controls
+$global-control-height: 40px;
+$global-control-small-height: 30px;
+$global-control-large-height: 55px;
+
+
+//
+// Base
+//
+$base-body-font-weight: 400;
+$base-link-hover-text-decoration: underline;
+$base-strong-font-weight: $bold;
+$base-code-color: inherit;
+$base-em-color: inherit;
+$base-selection-background: $secondary;
+
+
+//
+// Form
+//
+$form-background: $white;
+$form-color: $global-color;
+$form-focus-background: $white;
+$form-focus-color: $global-color;
+$form-border: $global-color;
+$form-focus-border: $primary;
+$form-radio-border: $global-color;
+$form-label-color: $global-font-size;
+$form-label-font-size: $global-small-font-size;
+
+
+//
+// Container
+//
+$container-max-width: 1200px;
+$container-xsmall-max-width: 750px;
+$container-small-max-width: 900px;
+$container-large-max-width: 1400px;
+$container-xlarge-max-width: 1600px;
+$container-padding-horizontal: 15px;
+$container-padding-horizontal-s: $global-gutter;
+$container-padding-horizontal-m: $global-medium-gutter;
+
+//
+// Alert
+//
+$alert-primary-background: $global-primary-background;
+$alert-primary-color: $white;
+$alert-success-background: $global-success-background;
+$alert-success-color: $white;
+$alert-warning-background: $global-warning-background;
+$alert-warning-color: $white;
+$alert-danger-background: $global-danger-background;
+$alert-danger-color: $white;
+
+
+//
+// Grid
+//
+$grid-gutter-horizontal: $global-gutter;
+$grid-gutter-horizontal-l: $global-medium-gutter;
+$grid-large-gutter-horizontal: $global-medium-gutter;
+$grid-large-gutter-horizontal-l: $global-large-gutter;
+
+
+//
+// Breadcrumb
+//
+$breadcrumb-item-color: $global-muted-color;
+$breadcrumb-divider: '/';
+$breadcrumb-divider-margin-horizontal: $global-margin;
+$breadcrumb-divider-color: $global-color;
+
+
+//
+// Lightbox
+//
+$lightbox-item-max-width: 90vh;
+$lightbox-item-max-height: 90vh;
+
+
+//
+// Animation
+//
+$animation-duration: $speed;
+$animation-fade-duration: $speed-slow;
+$animation-fast-duration: $speed-fast;
+
+
+//
+// Text
+//
+$text-lead-font-size: $global-large-font-size;
+$text-lead-line-height: $global-line-height;
+$text-lead-color: $global-emphasis-color;
+$text-meta-color: $global-muted-color;

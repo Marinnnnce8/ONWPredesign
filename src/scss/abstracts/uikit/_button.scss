@@ -1,0 +1,185 @@
+//----------  button
+//------------------------------------------------------------------------------
+a,
+button {
+	appearance: none;
+	outline: none;
+	transition: $speed $timing;
+
+	@include hover {
+		text-decoration: none;
+	}
+}
+
+button,
+input[type='button'],
+input[type='submit'] {
+	background: none;
+	border: 0;
+	cursor: pointer;
+	outline: none;
+	padding: 0;
+}
+
+.uk-button {
+	background-color: transparent;
+	text-transform: none;
+	font-weight: $bold;
+	padding: 0;
+	color: $white;
+	font-size: 16px;
+	line-height: 1.4;
+	position: relative;
+	transition: $speed $timing;
+	border: 0;
+
+	&.uk-button-text {
+		color: $secondary;
+	}
+
+	&.uk-button-primary {
+		background-color: $primary;
+	}
+
+	&.uk-button-secondary {
+		background-color: $green-alt;
+	}
+
+	&.uk-button-default {
+		background-color: $secondary;
+	}
+
+	&:not(.uk-button-text) {
+		border-radius: 5px;
+		padding: 15px 55px 16px 23px;
+		display: inline-block;
+		position: relative;
+
+		&::before {
+			font-weight: inherit;
+			color: inherit;
+			display: inline-block;
+			position: absolute;
+			right: 30px;
+			top: 50%;
+			font-size: 15px;
+			transform: translateY(-50%);
+			// content: font-char($arrow-right);
+			font-family: 'svgicons';
+		}
+
+		@include hover {
+			&:not(.uk-button-text) {
+				color: $white;
+			}
+
+			&.uk-button-primary {
+				background-color: $brick;
+			}
+
+			&.uk-button-secondary {
+				background-color: $green-dark-alt;
+			}
+
+			&.uk-button-default {
+				background-color: $brown-dark;
+			}
+		}
+	}
+
+	&.uk-text-large {
+		font-size: 18px;
+	}
+}
+
+.uk-button-text {
+	text-align: left;
+	padding: 0;
+	line-height: 2.3;
+
+	&::before {
+		background-color: $secondary;
+		height: 3px;
+		bottom: 0;
+		border-bottom: 0;
+		width: 0%;
+		transition: .4s ease;
+	}
+
+	@include hover {
+		&::before {
+			width: 100%;
+		}
+	}
+}
+
+.uk-button-primary {
+
+	&.blue {
+		background-color: $blue-sky;
+		color: $white;
+
+
+		@include hover {
+			background-color: $primary;
+		}
+	}
+}
+
+.uk-button-small {
+	&:not(.uk-button-text) {
+		font-size: 13px;
+		padding: 11px 40px 11px 20px;
+
+		&::before {
+			font-size: 11px;
+			right: 20px;
+		}
+	}
+}
+
+.uk-button-large {
+	&:not(.uk-button-text) {
+		font-size: 18px;
+
+		&::before {
+			font-size: 16px;
+		}
+	}
+}
+
+.sighting-btn {
+	position: fixed;
+	left: 0;
+	width: 100%;
+	bottom: 0;
+	z-index: 5;
+
+	&::after {
+		background-color: transparent;
+		position: absolute;
+		content: '';
+		left: 0;
+		width: 100%;
+		bottom: 0;
+		top: 3px;
+		z-index: -1;
+		box-shadow: 5px 15px 30px 0 rgba($black, .6);
+	}
+
+	>.shape {
+		color: $primary;
+		fill: $primary;
+	}
+
+	.uk-button {
+		background-color: transparent;
+		clip-path: none;
+		text-align: left;
+		width: 100%;
+
+		&::before {
+			right: 20px;
+		}
+	}
+}

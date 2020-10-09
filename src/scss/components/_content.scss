@@ -1,0 +1,123 @@
+.nb-main {
+	h1 {
+		max-width: 740px;
+	}
+
+	.nb-btn-label {
+		color: $secondary;
+		font-weight: $light;
+		margin-bottom: 15px;
+	}
+
+	.uk-text-meta {
+		color: $secondary;
+	}
+
+	.uk-text-lead {
+		margin-bottom: 40px;
+	}
+}
+
+.content {
+	p {
+		font-weight: 400;
+	}
+
+	h2 {
+		margin-top: 35px;
+	}
+
+	p a,
+	li a {
+		font-weight: $light;
+		color: $brick;
+		font-size: 18px;
+		vertical-align: inherit;
+		line-height: inherit;
+		position: relative;
+		display: inline-block;
+
+		&::before {
+			background-color: $brick;
+			height: 1px;
+			bottom: 2px;
+			content: '';
+			width: 0;
+			transition: .4s ease;
+			position: absolute;
+		}
+
+		@include hover {
+			color: $brick;
+
+			&::before {
+				width: 100%;
+			}
+		}
+	}
+
+	figure {
+		display: table;
+		margin-top: 0;
+		outline: none;
+
+		a {
+			cursor: zoom-in;
+			display: block;
+			width: 100%;
+		}
+
+		img {
+			display: block;
+			height: auto;
+
+			@media (max-width: $breakpoint-mobile) {
+				width: 100%;
+			}
+		}
+	}
+
+	figcaption {
+		caption-side: bottom;
+		display: table-caption;
+		font-family: $font-roboto;
+		color: $secondary;
+		font-size: .8rem;
+		padding: $global-small-margin;
+		text-align: center;
+	}
+
+	.align_right {
+		float: right;
+		margin-bottom: $global-medium-gutter;
+		margin-left: $global-medium-gutter;
+	}
+
+	.align_left {
+		float: left;
+		margin-bottom: $global-medium-gutter;
+		margin-right: $global-medium-gutter;
+	}
+
+	.align_center {
+		clear: both;
+		margin: $global-gutter auto;
+		text-align: center;
+	}
+
+	ul {
+		padding-left: 0;
+	}
+
+	@media (max-width: $breakpoint-mobile) {
+
+		.align_right,
+		.align_left,
+		.align_center {
+			clear: both;
+			float: none;
+			margin: $global-small-gutter 0;
+			width: 100%;
+		}
+	}
+}

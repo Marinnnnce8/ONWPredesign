@@ -1,0 +1,13 @@
+globals:
+  $: true
+rules:
+  # ES6
+  no-var: 0
+  prefer-const: 0
+env:
+  es6: false
+  browser: true
+  node: false
+parserOptions:
+  ecmaVersion: 5
+  sourceType: script

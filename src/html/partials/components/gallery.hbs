@@ -1,0 +1,26 @@
+<div class="gallery">
+	{{#> ukContainer size=(default size (default page.ukContainer ukContainer))}}
+		{{#*inline "out"}}
+
+		{{#if title}}<h3>{{title}}</h3>{{/if}}
+
+		<div class="gallery-wrap" data-uk-lightbox="animation: fade" data-uk-scrollspy="cls: uk-animation-fade; delay: 128; target: > .gallery-row > .gallery-image">
+		{{#each items}}
+			{{#with this}}
+				<div class="gallery-row">
+				{{#each this}}
+					{{#with this}}
+					<a href="{{href}}" class="gallery-image"{{#if alt}} data-alt="{{alt}}"{{/if}}{{#if caption}} data-caption="<div>{{{caption}}}</div>"{{/if}}>
+						<img src="{{{blankPixel}}}" data-src="{{src}}" alt="{{default alt ""}}" data-uk-img>
+					</a>
+					{{/with}}
+				{{/each}}
+				</div>
+			{{/with}}
+		{{/each}}
+		</div>
+		{{#if caption}}<div class="gallery-caption uk-text-center uk-margin-small-top">{{caption}}</div>{{/if}}
+
+		{{/inline}}
+	{{/ukContainer}}
+</div>

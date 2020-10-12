@@ -27,20 +27,18 @@
 		</defs>
 	</svg>
 	{{else}}
-	<div class="uk-overlay uk-position-bottom">
-		<div class='banner-inner'>
-			<div class='uk-background-cover uk-background-fixed uk-height-1-1' data-src='./img/internal-banner.jpg'
-				data-uk-img>
-				{{#> ukContainer size="small"}}
-				{{#*inline "out"}}
-				<div class='uk-inline uk-width-1-1 banner-title'>
-					<div class='uk-position-bottom uk-padding uk-padding-remove-horizontal'>
-						<h1>{{page.h1}}</h1>
-					</div>
+	<div class='banner-inner'>
+		<div class='uk-background-cover uk-background-fixed uk-height-1-1' data-src='./img/internal-banner.jpg'
+			data-uk-img>
+			{{#> ukContainer size="small"}}
+			{{#*inline "out"}}
+			<div class='uk-inline uk-width-1-1 banner-title'>
+				<div class='uk-position-bottom uk-padding uk-padding-remove-horizontal'>
+					<h1>{{page.h1}}</h1>
 				</div>
-				{{/inline}}
-				{{/ukContainer}}
 			</div>
+			{{/inline}}
+			{{/ukContainer}}
 		</div>
 	</div>
 	<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1500 661.2' style='position:absolute;' height='0' width='0'>

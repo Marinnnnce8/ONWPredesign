@@ -1,0 +1,52 @@
+{{#*inline "blocks"}}
+
+<section class='timeline-section'>
+    <div class='uk-container'>
+        <h2>Start of the Project 2019</h2>
+        <div class='timeline-inner uk-position-relative'>
+            <div class='timeline-line uk-position-top-center'>
+                <span class='uk-position-top-center' role='presentation'>
+                    <img data-uk-img src='./img/bird.png' alt='image'>
+                </span>
+                <span class='bottom' role='presentation'>
+                    <img data-uk-img src='./img/bird.png' alt='image'>
+                </span>
+            </div>
+            <div class='uk-flex uk-flex-column'
+                data-uk-scrollspy='cls: uk-animation-fade; target: >.uk-flex; delay: 500;'>
+                {{#each timelinecard}}
+                <div class='uk-flex {{#if odd}}uk-flex-start uk-flex-between{{else}} uk-flex-right{{/if}}'>
+                    <div class='uk-width-1-2@s uk-flex {{#if odd}}{{else}} uk-flex-row-reverse uk-flex-between{{/if}}'>
+                        <div class='timeline-card uk-margin-medium'>
+                            <h3>{{title}}</h3>
+                            {{#if imgExists}}
+                            <img data-uk-img src='{{src}}' alt='{{alt}}'>
+                            {{/if}}
+                            {{#each timelinecardText}}
+                            <p>{{text}}</p>
+                            {{/each}}
+                            {{#if buttonExists}}
+                            {{> ukButton label="Find out more" style="text"}}
+                            {{/if}}
+                        </div>
+                        <div class='timeline-date {{#if odd}}right{{else}}left{{/if}}'>
+                            <div class='uk-flex {{#if odd}}{{else}} uk-flex-row-reverse{{/if}}'>
+                                <span class='num'>{{number}}<sup>{{append}}</sup></span>
+                                <div class='timeline-line' role='presentation'>
+                                    <span class='uk-position-top-center' role='presentation'>
+                                        <img data-uk-img src='./img/bird.png' alt='image'>
+                                    </span>
+                                </div>
+                            </div>
+                            <span class='date'>{{date}}</span>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</section>
+
+{{/inline}}
+{{> templatePage}}

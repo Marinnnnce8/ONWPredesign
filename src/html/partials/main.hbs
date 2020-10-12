@@ -68,8 +68,7 @@
 				<div class="uk-flex uk-flex-between uk-flex-wrap">
 					<div class="faq">
 						<h2>Please feel free to contact us if you have any questions.</h2>
-						<a href='#' class='uk-button uk-button-secondary uk-button-large'>
-							View all <abbr title="frequently asked questions">FAQs</abbr></a>
+						{{> ukButton label="View all FAQs" style="secondary" icon="arrow-right" size="large"}}
 					</div>
 					<div class="address">
 						<h3 class="uk-text-bold">Address</h3>
@@ -86,18 +85,15 @@
 							<h3 class="uk-text-bold">General Enquiries:</h3>
 							<ul class="uk-list">
 								<li>
-									<a class='uk-button uk-button-text uk-margin-remove-bottom'
-										href='tel:+4401856881451'>+44(0) 1856
-										881451</a>
+									{{> ukButton label="+44(0) 1856 881451" style="text" class="uk-margin-remove-bottom"}}
 								</li>
 								<li class="uk-margin-remove-top">
-									<a class='uk-button uk-button-text'
-										href='mailto:info@onwp.org.uk'>info@onwp.org.uk</a>
+									{{> ukButton label="info@onwp.org.uk" style="text"}}
 								</li>
 							</ul>
 
 							<h3 class="uk-text-bold">Media enquiries:</h3>
-							<a class='uk-button uk-button-text' href='mailto:media@onwp.org.uk'>media@onwp.org.uk</a>
+							{{> ukButton label="media@onwp.org.uk" style="text"}}
 						</div>
 						<a href='#'><strong>Follow us on:</strong> <i data-uk-icon='icon: facebook'></i>
 							<span>Facebook</span></a>
@@ -126,17 +122,15 @@
 					<h3 class="uk-text-bold">General Enquiries:</h3>
 					<ul class="uk-list">
 						<li>
-							<a class='uk-button uk-button-text uk-margin-remove-bottom' href='tel:+4401856881451'>+44(0)
-								1856
-								881451</a>
+							{{> ukButton label="+44(0) 1856 881451" style="text" class="uk-margin-remove-bottom"}}
 						</li>
 						<li class="uk-margin-remove-top">
-							<a class='uk-button uk-button-text' href='mailto:info@onwp.org.uk'>info@onwp.org.uk</a>
+							{{> ukButton label="info@onwp.org.uk" style="text"}}
 						</li>
 					</ul>
 
 					<h3 class="uk-text-bold">Media enquiries:</h3>
-					<a class='uk-button uk-button-text' href='mailto:media@onwp.org.uk'>media@onwp.org.uk</a>
+					{{> ukButton label="media@onwp.org.uk" style="text"}}
 				</div>
 				<a href='#'><strong>Follow us on:</strong> <i data-uk-icon='icon: facebook'></i>
 					<span>Facebook</span></a>

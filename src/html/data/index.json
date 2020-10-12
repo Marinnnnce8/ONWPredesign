@@ -4,7 +4,7 @@
 		"clientName": "RSPB Orkney Native Wildlife Project"
 	},
 	"ukContainer": "small",
-	"cta": "Find out more",
+	"cta": "Report a Sighting",
 	"menu": [{
 			"name": "home",
 			"title": "Home",
@@ -89,28 +89,28 @@
 		"gallery": [
 			[{
 					"href": "https://aws.nbcommunication.com/template/img/placeholder-columns.jpg",
-					"src": "https://aws.nbcommunication.com/template/img/placeholder-columns.0x768.jpg",
+					"src": "./img/gallery-img-1.jpg",
 					"alt": "This gallery image has a caption.",
 					"caption": "This gallery image has a caption."
 				},
 				{
 					"href": "https://aws.nbcommunication.com/template/img/placeholder-skyscrapers.jpg",
-					"src": "https://aws.nbcommunication.com/template/img/placeholder-skyscrapers.0x768.jpg"
+					"src": "./img/gallery-img-2.jpg"
 				}
 			],
 			[{
 					"href": "https://aws.nbcommunication.com/template/img/placeholder-sprinkler.jpg",
-					"src": "https://aws.nbcommunication.com/template/img/placeholder-sprinkler.0x768.jpg"
+					"src": "./img/gallery-img-3.jpg"
 				},
 				{
 					"href": "https://aws.nbcommunication.com/template/img/placeholder-town.jpg",
-					"src": "https://aws.nbcommunication.com/template/img/placeholder-town.0x768.jpg",
+					"src": "./img/gallery-img-4.jpg",
 					"alt": "This gallery image also has a caption with HTML.",
 					"caption": "This <em>gallery</em> image also has a <strong>caption</strong> with HTML."
 				},
 				{
 					"href": "https://aws.nbcommunication.com/template/img/placeholder-waterfall.jpg",
-					"src": "https://aws.nbcommunication.com/template/img/placeholder-waterfall.0x768.jpg"
+					"src": "./img/gallery-img-5.jpg"
 				}
 			]
 		],

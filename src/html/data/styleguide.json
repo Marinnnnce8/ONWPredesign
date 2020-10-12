@@ -3,5 +3,11 @@
 		"name": "nb-styleguide"
 	},
 	"h1": "Standard Internal Page Without Header Banner",
+	"breadcrumbs": [{
+			"name": "Category",
+			"title": "Category",
+			"url": "#"
+		}
+	],
 	"intro": "This is some lead text to introduce the styleguide. It should gently catch the user's eye, initiating the reading of the main page content. Sit voluptatem accusantium. dolore mque laudantium, totam rem aperiam, eaque ipsa quae laudantium."
 }

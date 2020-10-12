@@ -3,9 +3,7 @@
 		"name": "nb-styleguide"
 	},
 	"h1": "Standard Internal Page with Style Guide",
-	"banner": {
-		"src": "https://aws.nbcommunication.com/template/img/placeholder-beach.jpg"
-	},
+	"banner": {},
 	"breadcrumbs": [{
 			"name": "level1",
 			"title": "Level 1",

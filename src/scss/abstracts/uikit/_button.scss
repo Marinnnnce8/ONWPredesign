@@ -1,101 +1,120 @@
-//----------  button
-//------------------------------------------------------------------------------
-a,
-button {
-	appearance: none;
-	outline: none;
-	transition: $speed $timing;
-
-	@include hover {
-		text-decoration: none;
-	}
-}
-
-button,
-input[type='button'],
-input[type='submit'] {
-	background: none;
-	border: 0;
-	cursor: pointer;
-	outline: none;
-	padding: 0;
-}
-
-.uk-button {
+// .uk-button
+@mixin hook-button {
 	background-color: transparent;
 	text-transform: none;
 	font-weight: $bold;
-	padding: 0;
 	color: $white;
 	font-size: 16px;
 	line-height: 1.4;
 	position: relative;
 	transition: $speed $timing;
 	border: 0;
+	border-radius: 5px;
+	padding: 15px 55px 16px 23px;
+	display: inline-block;
 
-	&.uk-button-text {
-		color: $secondary;
-	}
-
-	&.uk-button-primary {
-		background-color: $primary;
-	}
-
-	&.uk-button-secondary {
-		background-color: $green-alt;
-	}
-
-	&.uk-button-default {
-		background-color: $secondary;
-	}
-
-	&:not(.uk-button-text) {
-		border-radius: 5px;
-		padding: 15px 55px 16px 23px;
+	svg {
+		font-weight: inherit;
+		color: inherit;
 		display: inline-block;
-		position: relative;
-
-		&::before {
-			font-weight: inherit;
-			color: inherit;
-			display: inline-block;
-			position: absolute;
-			right: 30px;
-			top: 50%;
-			font-size: 15px;
-			transform: translateY(-50%);
-			// content: font-char($arrow-right);
-			font-family: 'svgicons';
-		}
-
-		@include hover {
-			&:not(.uk-button-text) {
-				color: $white;
-			}
-
-			&.uk-button-primary {
-				background-color: $brick;
-			}
-
-			&.uk-button-secondary {
-				background-color: $green-dark-alt;
-			}
-
-			&.uk-button-default {
-				background-color: $brown-dark;
-			}
-		}
-	}
-
-	&.uk-text-large {
-		font-size: 18px;
+		position: absolute;
+		right: 30px;
+		top: 50%;
+		width: 15px;
+		height: 15px;
+		transform: translateY(-50%);
 	}
 }
 
-.uk-button-text {
+// .uk-button:hover
+@mixin hook-button-hover {
+	&:not(.uk-button-text) {
+		color: $white;
+	}
+
+	&.uk-button-primary {
+		background-color: $brick;
+	}
+
+	&.uk-button-secondary {
+		background-color: $green-dark-alt;
+	}
+
+	&.uk-button-default {
+		background-color: $brown-dark;
+	}
+}
+
+// .uk-button-primary
+@mixin hook-button-primary {
+	background-color: $primary;
+
+	// &.blue {
+	// 	background-color: $blue-sky;
+	// 	color: $white;
+
+
+	// 	@include hover {
+	// 		background-color: $primary;
+	// 	}
+	// }
+}
+
+// .uk-button-primary-hover
+@mixin hook-button-primary-hover {
+	background-color: $brick;
+}
+
+// .uk-button-default
+@mixin hook-button-default {
+	background-color: $secondary;
+	color: $white;
+}
+
+// .uk-button-default-hover
+@mixin hook-button-default-hover {
+	background-color: $brown-dark;
+}
+
+// .uk-button-secondary
+@mixin hook-button-secondary {
+	background-color: $green-alt;
+}
+
+// .uk-button-secondary-hover
+@mixin hook-button-secondary-hover {
+	background-color: $green-dark-alt;
+}
+
+// .uk-button-small
+@mixin hook-button-small {
+	font-size: 13px;
+	padding: 5px 40px 5px 20px;
+
+	svg {
+		width: 11px;
+		height: 11px;
+		right: 20px;
+	}
+}
+
+// .uk-button-large
+@mixin hook-button-large {
+	padding: 2px 55px 1px 23px;
+	font-size: 18px;
+
+	svg {
+		width: 16px;
+		height: 16px;
+	}
+}
+
+// .uk-button-text
+@mixin hook-button-text {
 	text-align: left;
 	padding: 0;
 	line-height: 2.3;
+	color: $secondary;
 
 	&::before {
 		background-color: $secondary;
@@ -104,48 +123,20 @@ input[type='submit'] {
 		border-bottom: 0;
 		width: 0%;
 		transition: .4s ease;
-	}
-
-	@include hover {
-		&::before {
-			width: 100%;
-		}
+		position: absolute;
+		content: '';
 	}
 }
 
-.uk-button-primary {
-
-	&.blue {
-		background-color: $blue-sky;
-		color: $white;
-
-
-		@include hover {
-			background-color: $primary;
-		}
+@mixin hook-button-text-hover {
+	&::before {
+		width: 100%;
 	}
 }
 
-.uk-button-small {
-	&:not(.uk-button-text) {
-		font-size: 13px;
-		padding: 11px 40px 11px 20px;
-
-		&::before {
-			font-size: 11px;
-			right: 20px;
-		}
-	}
-}
-
-.uk-button-large {
-	&:not(.uk-button-text) {
-		font-size: 18px;
-
-		&::before {
-			font-size: 16px;
-		}
-	}
+// .uk-text-large
+@mixin hook-text-large {
+	font-size: 18px;
 }
 
 .sighting-btn {

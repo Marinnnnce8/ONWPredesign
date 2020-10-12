@@ -1,0 +1,17 @@
+<div class='share-widget uk-position-fixed uk-position-left uk-position-center-left uk-visible@s'>
+    <div class='uk-position-relative'>
+        <img class='shape' src='./img/listing-images-frame-bg.svg' data-uk-svg alt='image'>
+        <span>share on</span>
+        <div class='share-widget-links uk-flex uk-flex-column'>
+            {{#each items}}
+            {{#with this}}
+            <a href="{{href}}" aria-label="{{ariaLabel}}">
+                <svg viewBox="0 0 512 512">
+                    <use xlink:href="./symbol/icons.svg#{{symbol}}"></use>
+                </svg>
+            </a>
+            {{/with}}
+            {{/each}}
+        </div>
+    </div>
+</div>

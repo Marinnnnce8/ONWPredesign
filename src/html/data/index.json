@@ -5,8 +5,7 @@
 	},
 	"ukContainer": "small",
 	"cta": "Find out more",
-	"menu": [
-		{
+	"menu": [{
 			"name": "home",
 			"title": "Home",
 			"url": "home.html"
@@ -14,20 +13,17 @@
 		{
 			"name": "about",
 			"title": "About",
-			"children": [
-				{
-					"name": "child",
-					"title": "Child"
-				}
-			]
+			"children": [{
+				"name": "child",
+				"title": "Child"
+			}]
 		},
 		{
 			"name": "contact",
 			"title": "Contact"
 		}
 	],
-	"social": [
-		{
+	"social": [{
 			"name": "facebook",
 			"url": "https://www.facebook.com/"
 		},
@@ -43,8 +39,7 @@
 	],
 	"items": {
 		"children": {
-			"children": [
-				{
+			"children": [{
 					"title": "About",
 					"url": "#",
 					"getImage": "https://aws.nbcommunication.com/template/img/placeholder-beach.jpg",
@@ -68,8 +63,7 @@
 			"config": {
 				"cta": "Read more"
 			},
-			"post": [
-				{
+			"post": [{
 					"title": "News Post 1",
 					"url": "#",
 					"date_pub": "April 20th 2020",
@@ -93,8 +87,7 @@
 			]
 		},
 		"gallery": [
-			[
-				{
+			[{
 					"href": "https://aws.nbcommunication.com/template/img/placeholder-columns.jpg",
 					"src": "https://aws.nbcommunication.com/template/img/placeholder-columns.0x768.jpg",
 					"alt": "This gallery image has a caption.",
@@ -105,8 +98,7 @@
 					"src": "https://aws.nbcommunication.com/template/img/placeholder-skyscrapers.0x768.jpg"
 				}
 			],
-			[
-				{
+			[{
 					"href": "https://aws.nbcommunication.com/template/img/placeholder-sprinkler.jpg",
 					"src": "https://aws.nbcommunication.com/template/img/placeholder-sprinkler.0x768.jpg"
 				},
@@ -121,6 +113,22 @@
 					"src": "https://aws.nbcommunication.com/template/img/placeholder-waterfall.0x768.jpg"
 				}
 			]
+		],
+		"shareWidget": [{
+				"href": "#",
+				"ariaLabel": "Visit our Facebook page",
+				"symbol": "facebook"
+			},
+			{
+				"href": "#",
+				"ariaLabel": "Visit our Twitter page",
+				"symbol": "twitter"
+			},
+			{
+				"href": "#",
+				"ariaLabel": "Contact us via email",
+				"symbol": "envelope"
+			}
 		]
 	}
 }

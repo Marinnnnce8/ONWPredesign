@@ -6,8 +6,7 @@
 	"banner": {
 		"src": "https://aws.nbcommunication.com/template/img/placeholder-beach.jpg"
 	},
-	"breadcrumbs": [
-		{
+	"breadcrumbs": [{
 			"name": "level1",
 			"title": "Level 1",
 			"url": "#"

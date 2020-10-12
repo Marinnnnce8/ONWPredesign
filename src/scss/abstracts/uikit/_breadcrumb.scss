@@ -1,0 +1,59 @@
+// .uk-breadcrumb
+@mixin hook-breadcrumb {
+    padding: 30px 0 50px;
+}
+
+.uk-breadcrumb>:nth-child(n+2):not(.uk-first-column)::before {
+    display: none;
+}
+
+// .uk-breadcrumb > * > *
+@mixin hook-breadcrumb-item {
+    color: $breadcrumb-item-color;
+    position: relative;
+    transition: $speed $timing;
+    font-size: 16px;
+
+    >svg {
+        display: inline-block;
+        margin: 0 10px;
+        color: $ochre-dark;
+        fill: $ochre-dark;
+        width: 14px;
+        height: 14px;
+    }
+
+    span {
+        position: relative;
+
+        &::after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            content: '';
+            background-color: $black;
+            transition: $speed $timing;
+            height: 1px;
+        }
+    }
+}
+
+// .uk-breadcrumb > * > :hover,
+// .uk-breadcrumb > * > :focus
+@mixin hook-breadcrumb-item-hover {
+    color: rgba($breadcrumb-item-color, .7);
+
+    span::after {
+        opacity: .7;
+    }
+}
+
+// .uk-breadcrumb > :last-child > span,
+// .uk-breadcrumb > :last-child > a:not([href])
+@mixin hook-breadcrumb-item-active {
+
+    &::after {
+        display: none;
+    }
+}

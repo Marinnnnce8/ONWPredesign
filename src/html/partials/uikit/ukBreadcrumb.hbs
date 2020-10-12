@@ -1,17 +1,21 @@
 <ul class="uk-breadcrumb">
 	<li>
-		<a href="home.html">Home</a>
+		<a href="home.html"><span>Home</span></a>
 	</li>
-{{#if page.breadcrumbs}}
-{{#each page.breadcrumbs}}
+	{{#if page.breadcrumbs}}
+	{{#each page.breadcrumbs}}
 	{{#with this}}
 	<li>
-		<a href='{{default url "#"}}'>{{title}}</a>
+		<a href='{{default url "#"}}'><svg viewBox="0 0 512 512">
+				<use xlink:href="./symbol/icons.svg#arrow-right"></use>
+			</svg><span>{{title}}</span></a>
 	</li>
 	{{/with}}
-{{/each}}
-{{/if}}
+	{{/each}}
+	{{/if}}
 	<li>
-		<span>{{page.title}}</span>
+		<span><svg viewBox="0 0 512 512">
+				<use xlink:href="./symbol/icons.svg#arrow-right"></use>
+			</svg>{{page.title}}</span>
 	</li>
 </ul>

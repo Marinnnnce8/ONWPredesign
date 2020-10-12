@@ -101,14 +101,14 @@ export function compileHandlebars() {
 
 			// Load components
 			obj.loadComponents = base64({
-				path: '/js/components/',
+				path: './js/components/',
 				components: config.nbkit.concat(config.uikit),
 			});
 
 			// Helpers
-			obj.aws = 'https://aws.nbcommunication.com/template';
+			obj.aws = 'https://aws.nbcommunication.com/';
 			obj.blankPixel = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
-			obj.logo = 'img/logo.png';
+			obj.logo = './img/logo.png';
 			obj.year = (new Date()).getFullYear();
 
 			return obj;

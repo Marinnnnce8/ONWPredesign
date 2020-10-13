@@ -11,6 +11,12 @@ var main = {
 
 		nb.profilerStart('main.init');
 
+		var linkBoxes = document.querySelectorAll('.js-link-box');
+
+		if(linkBoxes) {
+			this.addMultiListener(window, 'load resize', this.linkBoxesSet);
+		}
+
 		// Content
 		var alignments = ['left', 'right', 'center'];
 		uk.$$('.content').forEach(function(block) {
@@ -141,7 +147,29 @@ var main = {
 		nb.profilerStop('main.renderItems');
 
 		return out;
-	}
+	},
+
+	//combining multiple event listeners
+	addMultiListener: function(element, eventNames, listener) {
+		var events = eventNames.split(' ');
+		for (var i=0, iLen=events.length; i<iLen; i++) {
+			element.addEventListener(events[i], listener, false);
+		}
+	},
+
+	//link boxes card-body bottom
+	linkBoxesSet: function() {
+
+		var linkBoxes = document.querySelectorAll('.js-link-box');
+		
+		for(var i = 0;i < linkBoxes.length;i++) {
+			var linkBoxText = linkBoxes[i].querySelector('.link-box-text');
+			var linkBoxBody = linkBoxes[i].querySelector('.uk-card-body');
+			var linkBoxTextHeight = linkBoxText.offsetHeight;
+
+			linkBoxBody.style.bottom = -Math.abs(linkBoxTextHeight) + 'px';
+		}
+	},
 };
 
 uk.ready(function() {

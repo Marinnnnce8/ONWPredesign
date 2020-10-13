@@ -34,8 +34,18 @@
 
 .link-box-alt {
     min-height: 365px;
-    background-color: $green-dark-alt;
     z-index: 0;
+
+    &::after {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        bottom: 0;
+        box-shadow: 0 0 90px 150px rgba($green-dark-alt, .7);
+        content: '';
+        z-index: 10;
+        pointer-events: none;
+    }
 
     >span {
         &.uk-text-bold {
@@ -67,7 +77,7 @@
 
     .uk-card-media-top {
         backface-visibility: hidden;
-        transition: $speed $timing;
+        transition: .35s ease;
         position: absolute;
         height: auto;
         width: 100%;
@@ -89,15 +99,14 @@
     }
 
     .uk-card-body {
-        z-index: 10;
+        z-index: 11;
         position: absolute;
         left: 0;
         right: 0;
         bottom: 0;
         backface-visibility: hidden;
-        padding: 25px 40px;
-        min-height: 1px;
-        transition: min-height .35s;
+        padding: 0;
+        transition: .35s ease;
 
         span {
             font-family: $font-roboto;
@@ -106,10 +115,14 @@
 
         p {
             font-size: 16px;
-            padding-top: 25px;
             font-weight: 400;
             margin-bottom: 25px;
         }
+    }
+
+    .link-box-title {
+        padding: 25px 40px;
+        transition: .35s ease;
     }
 
     .uk-card-title {
@@ -120,10 +133,8 @@
 
     .link-box-text {
         background-color: $green-dark-alt;
-        opacity: 0;
-        transition: opacity .25s, transform .45s ease;
-        transform: translateY(30px);
         padding-right: 65px;
+        padding: 25px 105px 25px 40px;
     }
 
     .read-more {
@@ -133,31 +144,46 @@
 
     @include hover {
         .uk-card-media-top {
-            transform: translateY(-50%);
+            transform: translateY(-45%);
+        }
+
+        .link-box-title {
+            padding-bottom: 0;
         }
 
         .uk-card-body {
-            min-height: 93% !important; // sass-lint:disable-line no-important
-            transition: min-height 0.35s;
-        }
-
-        .link-box-text {
-            opacity: 1;
-            transform: translateY(0);
+            bottom: 0 !important;
         }
     }
 
-    @media (max-width: $breakpoint-small) {
-        min-height: 390px;
+    @media (max-width: $breakpoint-large) {
 
-        .uk-card-body {
+        .link-box-title,
+        .link-box-text {
             padding: 20px 20px 30px 30px;
+        }
+
+        .link-box-text {
+            min-height: 130px;
         }
 
         @include hover {
             .uk-card-body {
                 min-height: 68% !important; // sass-lint:disable-line no-important
             }
+        }
+    }
+
+    @media (max-width: $breakpoint-small) {
+        min-height: 390px;
+
+        .link-box-title,
+        .link-box-text {
+            padding: 20px 15px 30px;
+        }
+
+        .uk-card-title {
+            font-size: 22px;
         }
     }
 }

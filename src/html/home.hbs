@@ -65,49 +65,8 @@
 		</div>
 		<ul class='uk-grid-match uk-grid-large uk-child-width-1-2@m' data-uk-grid
 			data-uk-height-match=".link-box-title">
-			<li>
-				<div class='link-box-alt js-link-box uk-card'>
-					<span class="uk-text-bold">News</span>
-					<div class='uk-card-media-top uk-background-cover' data-src='./img/link-img-1.jpg' data-uk-img>
-					</div>
-					<div class='uk-card-body'>
-						<div class="link-box-title uk-flex uk-flex-column uk-flex-right">
-							<span class="uk-text-italic">3 Dec 2019</span>
-							<h3 class='uk-card-title'>Welcome to the 83rd Stoat Snippet!</h3>
-						</div>
-						<div class='link-box-text'>
-							<p>Tracking tunnels – also known as footprint tunnels - are used to detect or
-								monitor the presence of mammals in an area by identifying their footprints...
-							</p>
-							{{> ukButton link="#" label="Continue reading" style="default" icon="arrow-right" size="small"}}
-						</div>
-					</div>
-					<a href='#' class='read-more' aria-label='Continue reading'></a>
-				</div>
-			</li>
-			<li>
-				<div class='link-box-alt js-link-box uk-card'>
-					<div class='uk-card-media-top uk-background-cover' data-src='./img/link-img-2.jpg' data-uk-img>
-					</div>
-					<span class="uk-text-bold">Event</span>
-					<div class='uk-card-body'>
-						<div class="link-box-title uk-flex uk-flex-column uk-flex-right">
-							<span class="uk-text-italic">8 Aug 2017</span>
-							<h3 class='uk-card-title'>Major project to protect Orkney’s
-								internationally important wildlife wins
-								Heritage Lottery Fund support
-							</h3>
-						</div>
-						<div class='link-box-text'>
-							<p>A short description text should gently catch the user's eye, initiating the
-								reading
-								of the page content.</p>
-							{{> ukButton link="#" label="Continue reading" style="default" icon="arrow-right" size="small"}}
-						</div>
-					</div>
-					<a href='#' class='read-more' aria-label='Continue reading'></a>
-				</div>
-			</li>
+			{{> linkBoxes category="News" src="./img/link-img-1.jpg" date="3 Dec 2019" title="Welcome to the 83rd Stoat Snippet!" text="Tracking tunnels – also known as footprint tunnels - are used to detect or monitor the presence of mammals in an area by identifying their footprints..."}}
+			{{> linkBoxes category="Event" src="./img/link-img-2.jpg" date="8 Aug 2017" title="Major project to protect Orkney’s internationally important wildlife wins Heritage Lottery Fund support" text="A short description text should gently catch the user's eye, initiating the reading of the page content."}}
 		</ul>
 		{{> ukButton link="#" label="View all news & events" style="primary" size="large" icon="arrow-right"}}
 	</div>

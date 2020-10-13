@@ -228,15 +228,27 @@
 
 		{{> sightingButton}}
 
-		{{#if page.banner}}
-		{{> banner}}
+		{{#if page.noBannerBreadcrumbs}}
 		{{else}}
-		{{#> ukContainer size=(default page.ukContainer ukContainer) class="uk-margin-top"}}
-		{{#*inline "out"}}
-		<h1>{{page.h1}}</h1>
-		{{> ukBreadcrumb }}
-		{{/inline}}
-		{{/ukContainer}}
+			{{#if page.banner}}
+			{{> banner}}
+			{{#if page.breadcrumbs}}
+			{{#> ukContainer size=(default page.ukContainer ukContainer) class="uk-margin-top"}}
+			{{#*inline "out"}}
+			{{> ukBreadcrumb }}
+			{{/inline}}
+			{{/ukContainer}}
+			{{/if}}
+			{{else}}
+			{{#> ukContainer size=(default page.ukContainer ukContainer) class="uk-margin-top"}}
+			{{#*inline "out"}}
+			<div class="no-hero">
+				<h1>{{page.h1}}</h1>
+			</div>
+			{{> ukBreadcrumb }}
+			{{/inline}}
+			{{/ukContainer}}
+			{{/if}}
 		{{/if}}
 
 		{{#> main }}{{/main}}

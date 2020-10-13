@@ -47,6 +47,21 @@
         pointer-events: none;
     }
 
+    &.link-box-blue {
+        &::after {
+            box-shadow: none;
+        }
+
+        .link-box-text,
+        .link-box-title {
+            padding: 25px 40px;
+        }
+
+        .link-box-text {
+            background-color: $blue-light;
+        }
+    }
+
     >span {
         &.uk-text-bold {
             position: absolute;

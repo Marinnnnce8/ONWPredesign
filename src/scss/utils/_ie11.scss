@@ -1,3 +1,111 @@
-/*@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+@media screen and (-ms-high-contrast: active),
+screen and (-ms-high-contrast: none) {
+    .header {
+        padding: 15px 0 25px;
+        background-color: $white;
+    }
 
-}*/
+    .uk-background-fixed {
+        background-attachment: scroll;
+    }
+
+    .banner-section.home {
+        padding: 0;
+
+        h1 {
+            color: $white;
+        }
+
+        .uk-button-primary {
+            background-color: $blue-light;
+            border: 0;
+            z-index: 1;
+        }
+
+        .banner-text {
+            padding-top: 300px;
+        }
+    }
+
+    .intro-section.home {
+        padding-bottom: 50px;
+        background-color: $gray-alt;
+    }
+
+    .intro-inner,
+    .wildlife-section>.shape,
+    .links-section>.shape {
+        display: none;
+    }
+
+    .wildlife-section {
+        background-color: $green-alt;
+        margin-top: 0;
+        padding-top: 30px;
+    }
+
+    .wildlife-box {
+        &:nth-of-type(2) {
+            top: auto;
+            max-height: 335px;
+
+            .uk-background-cover {
+                height: 335px;
+            }
+        }
+
+        &:nth-of-type(3),
+        &:nth-of-type(4) {
+            margin-top: 15px;
+        }
+
+        &:nth-of-type(3) {
+            width: 50%;
+        }
+    }
+
+    .link-box .uk-card-body {
+        min-height: 153px;
+    }
+
+    .links-section {
+        &.news {
+            background-color: $secondary;
+            padding: 90px 0 30px;
+        }
+
+        &.involve {
+            margin-top: 0;
+            padding: 90px 0 30px;
+
+            .links-inner {
+                width: 100%;
+                left: 0;
+            }
+        }
+    }
+}
+
+
+//edge
+@supports (-ms-ime-align: auto) {
+    .header {
+        background-color: $white;
+    }
+
+    .banner-section.home {
+        h1 {
+            color: $white;
+        }
+
+        .uk-button-primary {
+            background-color: $blue-light;
+            border: 0;
+            z-index: 1;
+        }
+
+        .banner-text {
+            padding-top: 300px;
+        }
+    }
+}

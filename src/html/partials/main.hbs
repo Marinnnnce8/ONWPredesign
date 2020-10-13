@@ -118,7 +118,7 @@
 						<li><a href='#'>News & Events</a></li>
 						<li><a href='#'>Stoat Map</a></li>
 					</ul>
-					{{> ukButton link="#" class="uk-visible@s" label="Report a Sighting" style="primary" icon="arrow-right"}}
+					{{> ukButton link="#" class="uk-visible@s" label=cta style="primary" icon="arrow-right"}}
 					<button class='uk-hidden@l burger-menu' data-uk-toggle='target: #menu-nav'
 						aria-label='Open menu navigation'>
 						<img class='shape' src='./img/menu-dropdown.svg' data-uk-svg alt='image'>
@@ -225,6 +225,8 @@
 	</header>
 
 	<main class="uk-margin-bottom">
+
+		{{> sightingButton}}
 
 		{{#if page.banner}}
 		{{> banner}}

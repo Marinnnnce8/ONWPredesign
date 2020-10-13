@@ -22,14 +22,14 @@
 		height: 45px;
 		position: relative;
 
-		>svg,
-		&::before {
+		>svg {
 			width: 22px;
 			font-size: 22px;
 			position: absolute;
 			left: 50%;
 			top: 50%;
 			transform: translate(-50%, -50%);
+			transition: $speed $timing;
 		}
 
 		&:first-of-type svg {
@@ -48,7 +48,9 @@
 		}
 
 		@include hover {
-			opacity: .7;
+			>svg {
+				opacity: .7;
+			}
 		}
 	}
 }

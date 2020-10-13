@@ -19,23 +19,16 @@
     left: 36%;
     top: 44%;
 
-    &::before {
+    svg {
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        font-size: 20px;
+        width: 30px;
+        height: 30px;
         color: $secondary;
+        fill: $secondary;
         z-index: 1;
-    }
-
-    @media (max-width: $breakpoint-small) {
-        width: 40px;
-        height: 40px;
-
-        &::before {
-            font-size: 20px;
-        }
     }
 }
 

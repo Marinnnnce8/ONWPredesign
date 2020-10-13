@@ -145,34 +145,17 @@ a {
 	font-size: 18px;
 }
 
-.sighting-btn {
+.sighting-button {
 	position: fixed;
 	left: 0;
 	width: 100%;
 	bottom: 0;
 	z-index: 5;
-
-	&::after {
-		background-color: transparent;
-		position: absolute;
-		content: '';
-		left: 0;
-		width: 100%;
-		bottom: 0;
-		top: 3px;
-		z-index: -1;
-		box-shadow: 5px 15px 30px 0 rgba($black, .6);
-	}
-
-	>.shape {
-		color: $primary;
-		fill: $primary;
-	}
+	box-shadow: 5px 15px 30px 0 rgba($black, .6);
 
 	.uk-button {
-		background-color: transparent;
-		clip-path: none;
 		text-align: left;
+		border-radius: 0;
 		width: 100%;
 
 		&::before {

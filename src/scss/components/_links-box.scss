@@ -17,6 +17,14 @@
 
     .uk-card-body {
         padding: 35px 25px;
+
+        >svg {
+            width: 130px;
+            height: 130px;
+            color: $white;
+            fill: $white;
+            margin: 25px auto 0;
+        }
     }
 
     @include hover {

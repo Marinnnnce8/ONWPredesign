@@ -18,7 +18,7 @@
 
 <body>
 
-	<header class="header" data-uk-sticky="media: 960; animation: uk-animation-slide-top; show-on-up: true;">
+	{{!-- <header class="header" data-uk-sticky="media: 960; animation: uk-animation-slide-top; show-on-up: true;">
 		<nav class="uk-navbar-container uk-navbar" data-uk-navbar>
 
 			<div class="uk-navbar-left">
@@ -39,6 +39,188 @@
 			</div>
 			{{/if}}
 
+		</nav>
+	</header> --}}
+
+	<header class='header uk-position-absolute uk-position-top'>
+		<img src='./img/header-mobile-tablet.svg' data-uk-svg alt='image' class='uk-hidden@s shape'>
+		<nav class='uk-flex uk-flex-between' data-uk-navbar>
+			<a href='#' class='uk-navbar-item uk-logo'>
+				<img src="{{logo}}" alt="{{nb.siteName}} Logo">
+			</a>
+
+			<div class='uk-flex uk-flex-column'>
+				<ul class='uk-flex uk-flex-right nav-top'>
+					<li><a href='#'>Donate</a></li>
+					<li class='uk-visible@s'><a href='#'><abbr title='Frequently Asked Questions'>FAQ</abbr></a></li>
+					<li class='uk-visible@s'><a href='#'>Resources</a></li>
+					<li class='uk-visible@s'><a href='#'>Contact</a></li>
+					<li class='uk-visible@s'><a href='#'>Follow us <i>
+								<svg viewBox="0 0 24 24">
+									<use xlink:href="./symbol/icons.svg#facebook"></use>
+								</svg>
+							</i></a></li>
+				</ul>
+
+				<div class='uk-flex uk-flex-right uk-flex-middle'>
+					<ul
+						class='uk-flex uk-flex-middle uk-margin-remove-vertical uk-padding-remove-left nav-bottom uk-visible@l'>
+						<li class='uk-parent'>
+							<button>The Project
+								<svg viewBox="0 0 24 24">
+									<use xlink:href="./symbol/icons.svg#chevron-down"></use>
+								</svg>
+							</button>
+							<div data-uk-dropdown='mode: click'
+								class='uk-navbar-dropdown uk-navbar-dropdown-bottom-left'>
+								<img class='shape' src='./img/menu-dropdown.svg' data-uk-svg alt='image'>
+								<ul class='uk-nav uk-navbar-dropdown-nav uk-position-z-index'>
+									<li><a href='#'>Volunteer with Us</a></li>
+									<li><a href='#'>Submit a Sighting</a></li>
+									<li><a href='#'>Landowner Support</a></li>
+									<li><a href='#'>Fun and learning</a></li>
+									<li><a href='#'>Tour operators & guides</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class='uk-parent'>
+							<button>Protecting Wildlife
+								<svg viewBox="0 0 24 24">
+									<use xlink:href="./symbol/icons.svg#chevron-down"></use>
+								</svg>
+							</button>
+							<div data-uk-dropdown='mode: click'
+								class='uk-navbar-dropdown uk-navbar-dropdown-bottom-left'>
+								<img class='shape' src='./img/menu-dropdown.svg' data-uk-svg alt='image'>
+								<ul class='uk-nav uk-navbar-dropdown-nav'>
+									<li><a href='#'>Orkney</a></li>
+									<li><a href='#'>Native Wildlife</a></li>
+									<li><a href='#'>Biosecurity</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class='uk-parent'>
+							<button>Get Involved
+								<svg viewBox="0 0 24 24">
+									<use xlink:href="./symbol/icons.svg#chevron-down"></use>
+								</svg>
+							</button>
+							<div data-uk-dropdown='mode: click'
+								class='uk-navbar-dropdown uk-navbar-dropdown-bottom-left'>
+								<img class='shape' src='./img/menu-dropdown.svg' data-uk-svg alt='image'>
+								<ul class='uk-nav uk-navbar-dropdown-nav'>
+									<li><a href='#'>Volunteer with Us</a></li>
+									<li><a href='#'>Submit a Sighting</a></li>
+									<li><a href='#'>Landowner Support</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href='#'>News & Events</a></li>
+						<li><a href='#'>Stoat Map</a></li>
+					</ul>
+					{{> ukButton link="#" class="uk-visible@s" label="Report a Sighting" style="primary" icon="arrow-right"}}
+					<button class='uk-hidden@l burger-menu' data-uk-toggle='target: #menu-nav'
+						aria-label='Open menu navigation'>
+						<img class='shape' src='./img/menu-dropdown.svg' data-uk-svg alt='image'>
+						<span role='presentation'></span>
+					</button>
+					<div id='menu-nav' data-uk-modal class='uk-hidden@l'>
+						<div class='uk-modal-dialog uk-modal-body uk-width-1-1'>
+							<img class='shape' src='./img/menu-dropdown.svg' data-uk-svg alt='image'>
+							<button class='uk-modal-close-default uk-position-top-right' data-uk-close
+								aria-label='Close navigation menu'></button>
+							<ul class='uk-flex uk-flex-column nav-bottom'>
+								<li class='uk-padding-small uk-padding-remove-vertical uk-hidden@s'><a href='#'>Follow
+										us <i>
+											<svg viewBox="0 0 24 24">
+												<use xlink:href="./symbol/icons.svg#facebook"></use>
+											</svg>
+										</i></a></li>
+								<li><a href='#'>Home</a></li>
+								<li class='uk-parent'>
+									<button>About
+										<svg viewBox="0 0 24 24">
+											<use xlink:href="./symbol/icons.svg#chevron-right"></use>
+										</svg>
+									</button>
+									<div data-uk-dropdown='mode: click' class='uk-navbar-dropdown' id='nav-children-1'>
+										<img class='shape' src='./img/menu-dropdown.svg' data-uk-svg alt='image'>
+										<ul class='uk-nav uk-navbar-dropdown-nav uk-position-z-index'>
+											<li class='uk-hidden@l'><button
+													data-uk-toggle='target: #nav-children-1; animation: true'>Back
+													<svg viewBox="0 0 24 24">
+														<use xlink:href="./symbol/icons.svg#chevron-left"></use>
+													</svg>
+												</button>
+											</li>
+											<li class='uk-hidden@l'><span>About</span></li>
+											<li><a href='#'>Volunteer with Us</a></li>
+											<li><a href='#'>Submit a Sighting</a></li>
+											<li><a href='#'>Landowner Support</a></li>
+											<li><a href='#'>Fun and learning</a></li>
+											<li><a href='#'>Tour operators & guides</a></li>
+										</ul>
+									</div>
+								</li>
+								<li class='uk-parent'>
+									<button>Get Involved
+										<svg viewBox="0 0 24 24">
+											<use xlink:href="./symbol/icons.svg#chevron-right"></use>
+										</svg>
+									</button>
+									<div data-uk-dropdown='mode: click' class='uk-navbar-dropdown' id='nav-children-2'>
+										<img class='shape' src='./img/menu-dropdown.svg' data-uk-svg alt='image'>
+										<ul class='uk-nav uk-navbar-dropdown-nav'>
+											<li class='uk-hidden@l'><button
+													data-uk-toggle='target: #nav-children-2; animation: true'>Back
+													<svg viewBox="0 0 24 24">
+														<use xlink:href="./symbol/icons.svg#chevron-left"></use>
+													</svg>
+												</button></li>
+											<li class='uk-hidden@l'><span>Get Involved</span>
+											</li>
+											<li><a href='#'>Volunteer with Us</a></li>
+											<li><a href='#'>Submit a Sighting</a></li>
+											<li><a href='#'>Landowner Support</a></li>
+											<li><a href='#'>Fun and learning</a></li>
+											<li><a href='#'>Tour operators & guides</a></li>
+										</ul>
+									</div>
+								</li>
+								<li class='uk-parent'>
+									<button>Protecting Wildlife
+										<svg viewBox="0 0 24 24">
+											<use xlink:href="./symbol/icons.svg#chevron-right"></use>
+										</svg>
+									</button>
+									<div data-uk-dropdown='mode: click' class='uk-navbar-dropdown' id='nav-children-3'>
+										<img class='shape' src='./img/menu-dropdown.svg' data-uk-svg alt='image'>
+										<ul class='uk-nav uk-navbar-dropdown-nav'>
+											<li class='uk-hidden@l'><button
+													data-uk-toggle='target: #nav-children-3; animation: true'>Back
+													<svg viewBox="0 0 24 24">
+														<use xlink:href="./symbol/icons.svg#chevron-left"></use>
+													</svg>
+												</button></li>
+											<li class='uk-hidden@l'><span>Protecting
+													Wildlife</span></li>
+											<li><a href='#'>Orkney</a></li>
+											<li><a href='#'>Native Wildlife</a></li>
+											<li><a href='#'>Biosecurity</a></li>
+										</ul>
+									</div>
+								</li>
+								<li><a href='#'>News & Events</a></li>
+								<li><a href='#'>Stoat Map</a></li>
+								<li class='uk-hidden@s'><a href='#'><abbr
+											title='Frequently Asked Questions'>FAQ</abbr></a></li>
+								<li class='uk-hidden@s'><a href='#'>Media</a></li>
+								<li class='uk-hidden@s'><a href='#'>Contact</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
 		</nav>
 	</header>
 
@@ -68,7 +250,7 @@
 				<div class="uk-flex uk-flex-between uk-flex-wrap">
 					<div class="faq">
 						<h2>Please feel free to contact us if you have any questions.</h2>
-						{{> ukButton label="View all FAQs" style="secondary" icon="arrow-right" size="large"}}
+						{{> ukButton link="#" label="View all FAQs" style="secondary" icon="arrow-right" size="large"}}
 					</div>
 					<div class="address">
 						<h3 class="uk-text-bold">Address</h3>
@@ -85,17 +267,19 @@
 							<h3 class="uk-text-bold">General Enquiries:</h3>
 							<ul class="uk-list">
 								<li>
-									{{> ukButton label="+44(0) 1856 881451" style="text" class="uk-margin-remove-bottom"}}
+									{{> ukButton link="#" label="+44(0) 1856 881451" style="text" class="uk-margin-remove-bottom"}}
 								</li>
 								<li class="uk-margin-remove-top">
-									{{> ukButton label="info@onwp.org.uk" style="text"}}
+									{{> ukButton link="#" label="info@onwp.org.uk" style="text"}}
 								</li>
 							</ul>
 
 							<h3 class="uk-text-bold">Media enquiries:</h3>
-							{{> ukButton label="media@onwp.org.uk" style="text"}}
+							{{> ukButton link="#" label="media@onwp.org.uk" style="text"}}
 						</div>
-						<a href='#'><strong>Follow us on:</strong> <i data-uk-icon='icon: facebook'></i>
+						<a href='#'><strong>Follow us on:</strong> <i><svg viewBox="0 0 24 24">
+									<use xlink:href="./symbol/icons.svg#facebook"></use>
+								</svg></i>
 							<span>Facebook</span></a>
 					</div>
 				</div>
@@ -122,17 +306,19 @@
 					<h3 class="uk-text-bold">General Enquiries:</h3>
 					<ul class="uk-list">
 						<li>
-							{{> ukButton label="+44(0) 1856 881451" style="text" class="uk-margin-remove-bottom"}}
+							{{> ukButton link="#" label="+44(0) 1856 881451" style="text" class="uk-margin-remove-bottom"}}
 						</li>
 						<li class="uk-margin-remove-top">
-							{{> ukButton label="info@onwp.org.uk" style="text"}}
+							{{> ukButton link="#" label="info@onwp.org.uk" style="text"}}
 						</li>
 					</ul>
 
 					<h3 class="uk-text-bold">Media enquiries:</h3>
-					{{> ukButton label="media@onwp.org.uk" style="text"}}
+					{{> ukButton link="#" label="media@onwp.org.uk" style="text"}}
 				</div>
-				<a href='#'><strong>Follow us on:</strong> <i data-uk-icon='icon: facebook'></i>
+				<a href='#'><strong>Follow us on:</strong> <i><svg viewBox="0 0 24 24">
+							<use xlink:href="./symbol/icons.svg#facebook"></use>
+						</svg></i>
 					<span>Facebook</span></a>
 			</div>
 		</div>

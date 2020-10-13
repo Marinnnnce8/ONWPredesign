@@ -1,9 +1,615 @@
 .header {
+    z-index: 5;
 
-	.uk-logo {
+    a,
+    button {
+        transition: $speed $timing;
+        border: 0;
 
-		img {
-			width: 228px;
-		}
-	}
+        @include hover {
+            outline: none;
+            border: 0;
+        }
+    }
+
+    button {
+        font-family: $font-default;
+    }
+
+    >.shape {
+        color: transparent;
+        fill: transparent;
+    }
+
+    nav {
+        padding: 10px 50px;
+    }
+
+    .uk-logo img {
+        max-width: 130px;
+        width: 100%;
+        height: auto;
+    }
+
+    .uk-button-primary {
+        margin-left: 20px;
+        padding: 15px 40px 16px 23px;
+        font-size: 18px;
+
+        svg {
+            right: 18px;
+        }
+    }
+
+    .nav-top {
+        li {
+            padding: 0 20px;
+
+            a {
+                font-size: 16px;
+                font-family: $font-roboto;
+            }
+
+            &:first-of-type a {
+                font-weight: $bold;
+                color: $brick;
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background-color: $brick;
+                    opacity: 0;
+                    transition: $speed $timing;
+                }
+
+                @include hover {
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            i {
+                display: inline-block;
+                margin-left: 5px;
+                position: relative;
+
+                svg {
+                    color: $white;
+                    fill: $white;
+                    width: 12px;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 15px;
+                    height: 15px;
+                    background-color: $secondary;
+                    left: 50%;
+                    top: 50%;
+                    border-radius: 50%;
+                    z-index: -1;
+                    transform: translate(-50%, -50%);
+                    transition: $speed $timing;
+                }
+            }
+
+            &:not(:first-of-type) a {
+                font-weight: $light;
+                color: $secondary;
+
+                @include hover {
+                    color: $brick;
+
+                    i::after {
+                        background-color: $brick;
+                    }
+                }
+            }
+        }
+    }
+
+    .uk-dropdown {
+        background: transparent;
+        box-shadow: none;
+        min-width: 270px;
+        margin-top: 20px;
+        padding: 30px;
+
+        &::after {
+            background-color: transparent;
+            position: absolute;
+            content: '';
+            left: 10px;
+            width: calc(100% - 20px);
+            top: 15px;
+            height: calc(100% - 20px);
+            z-index: -1;
+            box-shadow: 5px 20px 35px 0 rgba($black, .5);
+        }
+
+        >img {
+            width: 100%;
+            height: auto;
+        }
+
+        .shape {
+            color: $white;
+            fill: $white;
+            z-index: 0;
+        }
+
+        >ul {
+            position: relative;
+        }
+    }
+
+    @media (max-width: $breakpoint-xlarge) {
+        .uk-button-primary {
+            margin-left: 0;
+            font-size: 16px;
+
+            span {
+                padding: 16px 25px 16px 5px;
+
+                &::before {
+                    right: 10px;
+                    font-size: 15px;
+                }
+            }
+        }
+
+        .uk-logo img {
+            max-width: 110px;
+        }
+    }
+
+    @media (max-width: $breakpoint-large) {
+        nav {
+            padding: 18px 20px;
+        }
+
+        .uk-button-primary span {
+            padding: 16px 53px 16px 28px;
+
+            &::before {
+                right: 30px;
+            }
+        }
+
+        .uk-logo img {
+            max-width: 125px;
+        }
+    }
+
+    @media (max-width: $breakpoint-medium) {
+        .nav-top li {
+            padding: 0 10px;
+        }
+    }
+
+    @media (max-width: $breakpoint-xsmall-max) {
+        width: 100%;
+
+        &.header-sticky {
+            position: fixed !important; // sass-lint:disable-line no-important
+            top: 0;
+            animation: slideInSticky .5s ease-in-out forwards;
+
+            >.shape {
+                color: $white;
+                fill: $white;
+            }
+
+            &::after {
+                background-color: transparent;
+                position: absolute;
+                content: '';
+                left: 0;
+                width: 100%;
+                top: 0;
+                height: calc(100% - 20px);
+                z-index: -2;
+                box-shadow: 5px 15px 30px 0 rgba($black, .3);
+            }
+        }
+
+        &.header-sticky-unactive {
+            animation: slideOutSticky .5s ease-in-out forwards;
+            position: fixed !important;
+            top: 0;
+
+            >.shape {
+                color: $white;
+                fill: $white;
+            }
+        }
+
+        .uk-logo img {
+            max-width: 100px;
+        }
+
+        .nav-top li {
+            padding: 0;
+        }
+    }
+}
+
+.header .nav-bottom,
+.nav-bottom {
+    >li {
+        padding: 0 10px;
+    }
+
+    button,
+    a {
+        background-color: transparent;
+        color: $secondary;
+        font-weight: $bold;
+        font-size: 19px;
+        line-height: 1.4;
+        border: 0;
+        padding: 0;
+
+        @include hover {
+            color: $brick;
+            outline: none;
+        }
+    }
+
+    button {
+        position: relative;
+
+        svg {
+            margin-bottom: 1px;
+            width: 12px;
+            height: 12px;
+            background-color: $gray-medium;
+            border-radius: 50%;
+            color: $white;
+            fill: $white;
+            padding: 1px;
+            transition: $speed $timing;
+        }
+
+        @include hover {
+            svg {
+                background-color: $brick;
+            }
+        }
+    }
+
+    .uk-open {
+        svg[data-svg='chevron-down'] {
+            transform: rotate(180deg);
+            transition: $speed $timing;
+        }
+    }
+
+    ul li a {
+        font-size: 18px;
+        padding: 8px 0;
+    }
+
+    @media (max-width: $breakpoint-xlarge) {
+        >li {
+            padding: 0 8px;
+        }
+    }
+
+    @media (max-width: $breakpoint-medium-max) {
+        .uk-dropdown {
+            background-color: transparent;
+        }
+
+        button,
+        a {
+            color: $white;
+            padding: 10px;
+            display: block;
+            width: 100%;
+            text-align: left;
+        }
+
+        button>svg {
+            width: 20px;
+            height: 20px;
+            color: $secondary;
+            fill: $secondary;
+            margin-left: 15px;
+        }
+
+        >li a,
+        >li button {
+            font-size: 34px;
+        }
+
+        .uk-navbar-dropdown {
+            top: 0 !important;
+            left: 0 !important;
+            bottom: 0;
+            width: 100%;
+            min-height: 700px;
+            margin-top: 0;
+
+            .shape {
+                color: $secondary;
+                fill: $secondary;
+            }
+
+            li {
+                padding-left: 35px;
+                padding-right: 35px;
+
+                &:not(:first-of-type) {
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+
+                    a {
+                        font-weight: 400;
+                    }
+                }
+
+                &:first-of-type {
+                    margin-bottom: 15px;
+
+                    button {
+                        padding-left: 0;
+                        position: relative;
+
+                        svg {
+                            position: absolute;
+                            left: -45px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+
+                a,
+                button {
+                    @include hover {
+                        color: $brick;
+                    }
+                }
+            }
+        }
+
+        li {
+
+            &:not(:first-of-type) a,
+            span {
+                color: $white;
+            }
+
+            &:not(:first-of-type) a {
+                font-size: 34px;
+            }
+
+            span {
+                font-size: 44px;
+                font-weight: $bold;
+            }
+
+            &:first-of-type button {
+                font-size: 26px;
+                font-weight: $light;
+                // font-family: $font-default;
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-small) {
+        padding: 0 15px;
+
+        button,
+        a {
+            padding: 5px 22px;
+        }
+
+        >li a,
+        >li button {
+            font-size: 20px;
+        }
+
+        li {
+            padding: 10px;
+
+            &:not(:first-of-type) {
+                a {
+                    font-size: 20px;
+                }
+
+                button svg {
+                    width: 14px;
+                    height: 14px;
+                    margin-left: 10px;
+                }
+            }
+
+            span {
+                font-size: 26px;
+            }
+
+            &:first-of-type button {
+                font-size: 16px;
+            }
+        }
+
+        >li {
+            &:first-of-type a {
+                font-size: 12px;
+                padding-left: 10px;
+                position: relative;
+                z-index: 1025;
+                width: 50%;
+
+                i {
+                    background-color: $white;
+                    border-radius: 50%;
+                    width: 18px;
+                    height: 18px;
+                    position: absolute;
+                    left: -15px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                svg {
+                    color: $secondary;
+                    fill: $secondary;
+                    width: 12px;
+                    height: 12px;
+                    position: absolute;
+                    top: 55%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+
+        .uk-navbar-dropdown {
+            padding: 70px 40px 0;
+
+            li {
+                padding-left: 0;
+                padding-right: 0;
+
+                &:first-of-type button {
+                    font-size: 16px;
+
+                    svg {
+                        width: 14px;
+                        height: 14px;
+                        left: -35px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.burger-menu {
+    background-color: transparent;
+    margin-left: 10px;
+    position: relative;
+    width: 58px;
+    height: 58px;
+
+    svg {
+        color: $secondary;
+        fill: $secondary;
+    }
+
+    span {
+        pointer-events: none;
+        z-index: 0;
+        position: absolute;
+        left: 50%;
+        width: 20px;
+        height: 4px;
+        background: $white;
+        content: '';
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: .5s ease-in-out;
+
+        &::after,
+        &::before {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: $white;
+            content: '';
+            transition: .5s ease-in-out;
+        }
+
+        &::after {
+            top: -7px;
+        }
+
+        &::before {
+            top: 7px;
+        }
+    }
+    @include hover {
+        outline: none;
+        border: 0;
+    }
+}
+
+.uk-modal {
+    background-color: rgba($secondary, .9);
+    padding: 10px;
+
+    @media (max-width: $breakpoint-small) {
+        padding: 10px;
+    }
+}
+
+.uk-modal-body {
+    @media (max-width: $breakpoint-small) {
+        padding: 10px 0 20px;
+    }
+}
+
+.uk-modal-dialog {
+    background-color: transparent;
+
+    >svg[data-svg] {
+        color: $secondary;
+        fill: $secondary;
+        z-index: -1;
+    }
+
+    .uk-modal-close-default {
+        padding: 20px;
+        margin-right: 40px;
+        margin-top: 25px;
+        z-index: 1025;
+
+        svg {
+            color: $white;
+            fill: $white;
+        }
+    }
+
+    @media(max-width: $breakpoint-small) {
+        .uk-modal-close-default {
+            padding: 7px;
+            margin-right: 25px;
+            margin-top: 17px;
+        }
+    }
+}
+
+@keyframes slideInSticky {
+    0% {
+        transform: translateY(-105%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutSticky {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-105%);
+    }
 }

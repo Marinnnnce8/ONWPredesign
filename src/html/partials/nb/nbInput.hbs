@@ -1,7 +1,20 @@
 <div class="Inputfield {{default class "uk-width-1-1"}}{{#if title}} nb-form-required{{/if}}" id="wrap_nb-form-{{page.name}}_{{name}}">
 
 {{#if label}}
-	<label class="uk-form-label" for="nb-form-{{page.name}}_{{name}}">{{label}}</label>
+	<label class="uk-form-label" for="nb-form-{{page.name}}_{{name}}">{{label}}
+		{{#if infoCloud}}
+			<a href='#' aria-label='Open to find out more'>i</a>
+			<span
+				data-uk-drop='mode: click; animation: uk-animation-slide-top-small; duration: 1000; pos: top-left'>
+				<span>{{infoCloud}}</span>
+				<a href='#' data-uk-close class='uk-drop-close' aria-label='Close the info box'></a>
+			</span>
+		{{/if}}
+	</label>
+{{/if}}
+
+{{#if additionalInfo}}
+	<span class='nb-form-description'>{{additionalInfo}}</span>
 {{/if}}
 
 	<div class="nb-form-content">
@@ -13,11 +26,23 @@
 		{{else}}
 		{{#if (eq type "submit")}}
 
-		<button id="nb-form-{{page.name}}_{{name}}" class="uk-button uk-button-{{default style "primary"}}" name="{{name}}" value="{{value}}" type="{{type}}">{{value}}</button>
+		<button id="nb-form-{{page.name}}_{{name}}" class="uk-button uk-button-{{default style "primary"}}{{#if size}} uk-button-{{size}}{{/if}}" name="{{name}}" value="{{value}}" type="{{type}}">
+			{{#if (eq pull "left")}}
+				{{#if icon}}
+					{{> renderIcon name=icon class="icon-left"}}
+				{{/if}}
+				{{value}}
+				{{else}}
+					{{value}}
+					{{#if icon}}
+						{{> renderIcon name=icon}}
+					{{/if}}
+			{{/if}}
+		</button>
 
 		{{else}}
 
-		<input id="nb-form-{{page.name}}_{{name}}" class="uk-input" name="{{name}}" type="{{default type "text"}}" {{#if title}}title="{{title}}" required{{else}}placeholder="Optional"{{/if}}>
+		<input id="nb-form-{{page.name}}_{{name}}" class="uk-input" name="{{name}}" type="{{default type "text"}}" {{#if title}}title="{{title}}" required{{/if}}>
 
 		{{/if}}
 		{{/if}}

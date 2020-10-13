@@ -1,3 +1,9 @@
+a {
+	@include hover {
+		text-decoration: none;
+	}
+}
+
 // .uk-button
 @mixin hook-button {
 	background-color: transparent;

@@ -1,246 +1,182 @@
 {{#*inline "blocks"}}
 
-{{#> ukContainer size="small" class="uk-margin-top"}}
-{{#*inline "out"}}
-<form id='nb-form-nb-sighting' class='uk-form-stacked InputfieldForm' method='post' data-uk-nb-form novalidate
-    data-colspacing='1'>
+{{!-- Form --}}
+{{#> nbForm}}
+{{#*inline "form"}}
+<form id="nb-form-{{page.name}}" class="uk-form-stacked InputfieldForm" method="post" data-uk-nb-form novalidate
+    data-colspacing="1">
+
     <h2>Sighting Information</h2>
 
-    <div class='uk-grid-small' data-uk-grid>
-        <fieldset>
-            <div class='Inputfield InputfieldDate nb-form-required uk-width-1-1 uk-first-column'
-                id='wrap_nb-form-nb-sighting_date'>
-                <label class='uk-form-label' for='nb-form-nb-sighting_date'>Date of Sighting</label>
-                <div class='nb-form-content uk-width-1-4@l uk-width-1-2@s uk-width-1-1'>
-                    <div role='alert'></div>
-                    <s class='uk-inline'>
-                        <span class='uk-form-icon' data-uk-icon='calendar' role='presentation'></span>
-                        <input id='nb-form-nb-sighting_date' class='uk-input InputfieldMaxWidth' name='calendar'
-                            type='date' aria-invalid='true' title='Please enter date of sighting' required>
-                    </s>
-                </div>
-            </div>
-            <div class='Inputfield InputfieldMap nb-form-required uk-grid-margin uk-width-1-1 uk-first-column'
-                id='wrap_nb-form-nb-sighting_map'>
-                <label class='uk-form-label' for='nb-form-nb-sighting_map'>Place marker position on the
-                    map
-                    <a href='#' aria-label='Open to find out more'>i</a>
-                    <span
-                        data-uk-drop='mode: click; animation: uk-animation-slide-top-small; duration: 1000; pos: top-left'>
-                        <span>You can use the +/- zoom buttons and click the map to drop or move the
-                            marker.</span>
-                        <a href='#' data-uk-close class='uk-drop-close' aria-label='Close the info box'></a>
-                    </span>
-                </label>
-                <div class='nb-form-content'>
-                    <div role='alert'></div>
-                    <input id='nb-form-nb-sighting_map' class='uk-input InputfieldMaxWidth' name='map' type='text'
-                        aria-invalid='true' title='Please place pin on map' required>
-                </div>
-            </div>
-            <div class='Inputfield InputfieldStoatGridRef nb-form-required uk-grid-margin uk-width-1-1 uk-first-column'
-                id='wrap_nb-form-nb-sighting_grid_ref'>
-                <label class='uk-form-label' for='nb-form-nb-sighting_grid_ref'>OS Grid Reference</label>
-                <div class='nb-form-content uk-width-1-2@s uk-width-1-1'>
-                    <div role='alert'></div>
-                    <input id='nb-form-nb-sighting_grid_ref' class='uk-input InputfieldMaxWidth' name='grid_ref'
-                        type='text' maxlength='2048' aria-invalid='true' title='Please enter OS Grid Reference'>
-                </div>
-            </div>
-            <div class='Inputfield InputfieldState nb-form-required uk-grid-margin uk-width-1-1 uk-first-column'
-                id='wrap_nb-form-nb-sighting_state'>
-                <label class='uk-form-label'>Was the stoat alive or
-                    dead? <a href='#' aria-label='Open to find out more'>i</a>
-                    <span
-                        data-uk-drop='mode: click; animation: uk-animation-slide-top-small; duration: 1000; pos: top-left'>
-                        <span>Some info text.</span>
-                        <a href='#' data-uk-close class='uk-drop-close' aria-label='Close the info box'></a>
-                    </span>
-                </label>
-                <div class='nb-form-content'>
-                    <div role='alert'></div>
-                    <div class='uk-margin uk-grid-small uk-child-width-auto uk-grid'>
-                        <label><input class='uk-radio' type='radio' name='radio2'> Dead</label>
-                        <label><input class='uk-radio' type='radio' name='radio2' checked> Alive</label>
-                    </div>
-                </div>
-            </div>
-            <div class='Inputfield InputfieldColor uk-grid-margin uk-width-1-1 uk-first-column'
-                id='wrap_nb-form-nb-sighting_color'>
-                <label class='uk-form-label' for='nb-form-nb-sighting_color'>Was color was it?</label>
-                <div class='nb-form-description'>Include description of ermine</div>
-                <div class='nb-form-content'>
-                    <div role='alert'></div>
-                    <input id='nb-form-nb-sighting_color' class='uk-input InputfieldMaxWidth' name='color' type='text'
-                        maxlength='2048' aria-invalid='true' title='Please enter color of ermine'>
-                </div>
-            </div>
-            <div class='Inputfield InputfieldFood uk-grid-margin uk-width-1-1 uk-first-column'
-                id='wrap_nb-form-nb-sighting_food'>
-                <label class='uk-form-label' for='nb-form-nb-sighting_food'>Was it carrying food?
-                    <a href='#' aria-label='Open to find out more'>i</a>
-                    <span
-                        data-uk-drop='mode: click; animation: uk-animation-slide-top-small; duration: 1000; pos: top-left'>
-                        <span>Some info text.</span>
-                        <a href='#' data-uk-close class='uk-drop-close' aria-label='Close the info box'></a>
-                    </span>
-                </label>
-                <div class='nb-form-content'>
-                    <div role='alert'></div>
-                    <input id='nb-form-nb-sighting_food' class='uk-input InputfieldMaxWidth' name='food' type='text'
-                        maxlength='2048' aria-invalid='true' title='Please enter was it carrying food'>
-                </div>
-            </div>
-            <div class='Inputfield InputfieldStoatNum nb-form-required uk-grid-margin uk-width-1-1 uk-first-column'
-                id='wrap_nb-form-nb-sighting_stoat_number'>
-                <label class='uk-form-label' for='nb-form-nb-sighting_stoat_number'>How many stoats did
-                    you see at the same time?</label>
-                <div class='nb-form-content uk-width-1-4@s uk-width-1-1'>
-                    <div role='alert'></div>
-                    <input id='nb-form-nb-sighting_stoat_number' class='uk-input InputfieldMaxWidth' name='stoat_number'
-                        type='number' min='0' max='100' aria-invalid='true'
-                        title='Please enter how many stoats did you see at the same time' required>
-                </div>
-            </div>
-            <div class='Inputfield InputfieldAboutLocation uk-grid-margin uk-width-1-1 uk-first-column'
-                id='wrap_nb-form-nb-sighting_about_location'>
-                <label class='uk-form-label' for='nb-form-nb-sighting_about_location'>About the
-                    location</label>
-                <div class='nb-form-description'>e.g. 100m from south edge of Rousay</div>
-                <div class='nb-form-content'>
-                    <div role='alert'></div>
-                    <input id='nb-form-nb-sighting_about_location' class='uk-input InputfieldMaxWidth'
-                        name='about_location' type='text' maxlength='2048' aria-invalid='true'
-                        title='Please write more about location of ermine'>
-                </div>
-            </div>
-            <div class='Inputfield InputfieldTextarea uk-width-1-1 uk-grid-margin uk-first-column'
-                id='wrap_nb-form-nb-sighting_useful_information'>
-                <label class='uk-form-label' for='nb-form-nb-sighting_useful_information'>Other useful
-                    information</label>
-                <div class='nb-form-content'>
-                    <div role='alert'></div>
-                    <textarea id='nb-form-nb-sighting_useful_information' class='uk-textarea InputfieldMaxWidth'
-                        name='useful_information' rows='9' aria-invalid='true'
-                        title='Please Other useful information'></textarea>
-                </div>
-            </div>
-        </fieldset>
-        <fieldset>
-            <h2>Contact Information</h2>
-            <div class='Inputfield InputfieldText nb-form-required uk-width-1-1 uk-first-column'
-                id='wrap_nb-form-nb-sighting_name'>
-                <label class='uk-form-label' for='nb-form-nb-sighting_name'>Contact Name</label>
-                <div class='nb-form-content'>
-                    <div role='alert'></div>
-                    <input id='nb-form-nb-sighting_name' class='uk-input InputfieldMaxWidth' name='name' type='text'
-                        maxlength='2048' aria-invalid='true' title='Please enter your name' required>
-                </div>
-            </div>
-            <div class='Inputfield InputfieldEmail nb-form-required uk-width-1-1 uk-grid-margin uk-first-column'
-                id='wrap_nb-form-nb-sighting_email'>
-                <label class='uk-form-label' for='nb-form-nb-sighting_email'>Email</label>
-                <div class='nb-form-content'>
-                    <div role='alert'></div>
-                    <input id='nb-form-nb-sighting_email' name='email' class='uk-input InputfieldMaxWidth' type='email'
-                        maxlength='512' aria-invalid='true' title='Please enter a valid email' required>
-                </div>
-            </div>
-            <div class='Inputfield InputfieldText uk-width-1-1 uk-grid-margin uk-first-column'
-                id='wrap_nb-form-nb-sighting_tel'>
-                <label class='uk-form-label' for='nb-form-nb-sighting_tel'>Telephone</label>
-                <span class='uk-text-small'>We might call you to check the sighting details</span>
-                <div class='nb-form-content uk-width-1-3@s uk-width-1-1'>
-                    <div role='alert'></div>
-                    <input id='nb-form-nb-sighting_tel' class='uk-input InputfieldMaxWidth' name='tel' type='tel'
-                        maxlength='2048'>
-                </div>
-            </div>
-            <div class='Inputfield InputfieldAddress1 uk-width-1-1 uk-grid-margin uk-first-column'
-                id='wrap_nb-form-nb-sighting_address_1'>
-                <label class='uk-form-label' for='nb-form-nb-sighting_address_1'>Address 1</label>
-                <div class='nb-form-content'>
-                    <div role='alert'></div>
-                    <input id='nb-form-nb-sighting_address_1' name='address_1' class='uk-input InputfieldMaxWidth'
-                        type='text' maxlength='512' aria-invalid='true' title='Please enter address'>
-                </div>
-            </div>
-            <div class='Inputfield InputfieldAddress2 uk-width-1-1 uk-grid-margin uk-first-column'
-                id='wrap_nb-form-nb-sighting_address_2'>
-                <label class='uk-form-label' for='nb-form-nb-sighting_address_2'>Address 2</label>
-                <div class='nb-form-content'>
-                    <div role='alert'></div>
-                    <input id='nb-form-nb-sighting_address_2' name='address_2' class='uk-input InputfieldMaxWidth'
-                        type='text' maxlength='512' aria-invalid='true' title='Please enter address'>
-                </div>
-            </div>
-            <div data-uk-grid class='uk-grid-margin'>
-                <div class='Inputfield InputfieldTown uk-width-3-4@s uk-width-1-1 uk-first-column'
-                    id='wrap_nb-form-nb-sighting_town'>
-                    <label class='uk-form-label' for='nb-form-nb-sighting_town'>Town</label>
-                    <div class='nb-form-content'>
-                        <div role='alert'></div>
-                        <input id='nb-form-nb-sighting_town' name='town' class='uk-input InputfieldMaxWidth' type='text'
-                            maxlength='512' aria-invalid='true' title='Please enter town'>
-                    </div>
-                </div>
-                <div class='Inputfield InputfieldPostcode uk-width-1-4@s uk-width-1-1 uk-first-column uk-padding-small uk-padding-remove-vertical uk-padding-remove-right'
-                    id='wrap_nb-form-nb-sighting_postcode'>
-                    <label class='uk-form-label' for='nb-form-nb-sighting_postcode'>Postcode</label>
-                    <div class='nb-form-content'>
-                        <div role='alert'></div>
-                        <input id='nb-form-nb-sighting_postcode' name='postcode' class='uk-input InputfieldMaxWidth'
-                            type='text' maxlength='512' aria-invalid='true' title='Please enter postcode'>
-                    </div>
-                </div>
-            </div>
-            <div class='Inputfield InputfieldConsent nb-form-required uk-width-1-1 uk-grid-margin uk-first-column'
-                id='wrap_nb-form-nb-sighting_consent'>
-                <div class='nb-form-content'>
-                    <div role='alert'></div>
-                    <div class='uk-margin uk-grid-small uk-child-width-auto uk-grid'>
-                        <label class='uk-flex'>
-                            <input id='nb-form-nb-sighting_consent' name='consent'
-                                class='uk-checkbox InputfieldMaxWidth' aria-invalid='true'
-                                title='Please check if you agree...' type='checkbox' checked>
-                            <span class='terms'>I consent to my data being used in accordance with the
-                                Orkney Native
-                                Wildlife <a class='uk-button uk-button-text' href='#'>Project Privacy
-                                    Policy</a> and
-                                <a class='uk-button uk-button-text' href='#'>Terms of Service</a>.</span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div class='Inputfield InputfieldSubscribe nb-form-required uk-width-1-1 uk-first-column'
-                id='wrap_nb-form-nb-sighting_subscribe'>
-                <div class='nb-form-content'>
-                    <div role='alert'></div>
-                    <div class='uk-margin uk-grid-small uk-child-width-auto uk-grid'>
-                        <label class='uk-flex'>
-                            <input id='nb-form-nb-sighting_subscribe' name='subscribe'
-                                class='uk-checkbox InputfieldMaxWidth' aria-invalid='true'
-                                title='Would you like to register for email updates?' type='checkbox' checked>
-                            <span class='terms'>Would you like to register for email updates?</span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <p>Please provide as much information as possible. Although some information is optional, it
-                would help us if you can provide contact details so we can contact you to verify
-                sighting information if needed.</p>
-        </fieldset>
-        <div class='Inputfield InputfieldSubmit uk-width-1-1 uk-first-column' id='wrap_nb-form-nb-sighting_submit'>
-            <div class='nb-form-content'>
+    {{#> ukGrid class="uk-grid-small"}}
+    {{#*inline "cells"}}
+
+    <fieldset>
+        <div class='Inputfield InputfieldDate nb-form-required uk-first-column' id='wrap_nb-form-nb-sighting_date'>
+            <label class='uk-form-label' for='nb-form-nb-sighting_date'>Date of Sighting</label>
+            <div class='nb-form-content uk-width-1-4@l uk-width-1-2@s'>
                 <div role='alert'></div>
-                <button id='nb-form-nb-sighting_submit' class='uk-button uk-button-primary' name='submit'
-                    value='Send Report' type='submit'>Send Report</button>
+                <span class='uk-inline'>
+                    <input id='nb-form-nb-sighting_date' class='uk-input InputfieldMaxWidth' name='calendar' type='date'
+                        title='Please enter date of sighting' required>
+                </span>
             </div>
         </div>
-    </div>
+
+        <div class='Inputfield InputfieldMap nb-form-required uk-grid-margin uk-first-column'
+            id='wrap_nb-form-nb-sighting_map'>
+            <label class='uk-form-label' for='nb-form-nb-sighting_map'>Place marker position on the
+                map
+                <a href='#' aria-label='Open to find out more'>i</a>
+                <span
+                    data-uk-drop='mode: click; animation: uk-animation-slide-top-small; duration: 1000; pos: top-left'>
+                    <span>You can use the +/- zoom buttons and click the map to drop or move the
+                        marker.</span>
+                    <a href='#' data-uk-close class='uk-drop-close' aria-label='Close the info box'></a>
+                </span>
+            </label>
+            <div class='nb-form-content'>
+                <div role='alert'></div>
+                <input id='nb-form-nb-sighting_map' class='uk-input InputfieldMaxWidth' name='map' type='text'
+                    title='Please place pin on map' required>
+            </div>
+        </div>
+        <div class="uk-grid-margin uk-first-column">
+            {{> nbInput class="uk-width-1-2@s" label="OS Grid Reference" name="os_grid_reference" title="Please enter OS Grid Reference"}}
+        </div>
+
+        <div class='Inputfield InputfieldState nb-form-required uk-grid-margin uk-first-column'
+            id='wrap_nb-form-nb-sighting_state'>
+            <label class='uk-form-label'>Was the stoat alive or
+                dead? <a href='#' aria-label='Open to find out more'>i</a>
+                <span
+                    data-uk-drop='mode: click; animation: uk-animation-slide-top-small; duration: 1000; pos: top-left'>
+                    <span>Some info text.</span>
+                    <a href='#' data-uk-close class='uk-drop-close' aria-label='Close the info box'></a>
+                </span>
+            </label>
+            <div class='nb-form-content'>
+                <div role='alert'></div>
+                <div class='uk-margin uk-grid-small uk-child-width-auto uk-grid'>
+                    <label class="radio-label"><input class='uk-radio' type='radio' name='radio2'>&nbsp; Dead</label>
+                    <label class="radio-label"><input class='uk-radio' type='radio' name='radio2' checked>&nbsp;
+                        Alive</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="uk-grid-margin uk-first-column">
+            {{> nbInput label="Was color was it?" name="stoat_color" additionalInfo="Include description of ermine"}}
+        </div>
+
+        <div class="uk-grid-margin uk-first-column">
+            {{> nbInput label="Was it carrying food?" name="stoat_color" infoCloud="Some info text."}}
+        </div>
+
+        <div class='Inputfield InputfieldStoatNum nb-form-required uk-grid-margin uk-width-1-1 uk-first-column'
+            id='wrap_nb-form-nb-sighting_stoat_number'>
+            <label class='uk-form-label' for='nb-form-nb-sighting_stoat_number'>How many stoats did
+                you see at the same time?</label>
+            <div class='nb-form-content uk-width-1-4@s uk-width-1-1'>
+                <div role='alert'></div>
+                <input id='nb-form-nb-sighting_stoat_number' class='uk-input InputfieldMaxWidth' name='stoat_number'
+                    type='number' min='0' max='100' title='Please enter how many stoats did you see at the same time'
+                    required>
+            </div>
+        </div>
+
+        <div class="uk-grid-margin uk-first-column">
+            {{> nbInput label="About the location" name="location_info" additionalInfo="e.g. 100m from south edge of Rousay"}}
+        </div>
+
+        <div class="uk-grid-margin uk-first-column">
+            {{> nbInput type="textarea" label="Other useful information" name="additional_info"}}
+        </div>
+    </fieldset>
+
+    <fieldset>
+
+        <h2>Contact Information</h2>
+
+        <div class="uk-grid-margin uk-first-column">
+            {{> nbInput label="Contact Name" name="name" title="Please enter your name"}}
+        </div>
+
+        <div class="uk-grid-margin uk-first-column">
+            {{> nbInput label="Email" name="email" type="email" title="Please enter a valid email address"}}
+        </div>
+
+        <div class='Inputfield InputfieldText uk-width-1-1 uk-grid-margin uk-first-column'
+            id='wrap_nb-form-nb-sighting_tel'>
+            <label class='uk-form-label' for='nb-form-nb-sighting_tel'>Telephone</label>
+            <span class='uk-text-small'>We might call you to check the sighting details</span>
+            <div class='nb-form-content uk-width-1-3@s uk-width-1-1'>
+                <div role='alert'></div>
+                <input id='nb-form-nb-sighting_tel' class='uk-input InputfieldMaxWidth' name='tel' type='tel'
+                    maxlength='2048'>
+            </div>
+        </div>
+
+        <div class="uk-grid-margin uk-first-column">
+            {{> nbInput label="Address 1" name="address_1"}}
+        </div>
+
+        <div class="uk-grid-margin uk-first-column">
+            {{> nbInput label="Address 2" name="address_2"}}
+        </div>
+
+        <div data-uk-grid class='uk-grid-margin'>
+            <div class="uk-width-3-4@s uk-first-column">
+                {{> nbInput label="Town" name="town"}}
+            </div>
+            <div
+                class="uk-width-1-4@s uk-first-column uk-padding-small uk-padding-remove-vertical uk-padding-remove-right">
+                {{> nbInput label="Postcode" name="postcode"}}
+            </div>
+        </div>
+        <div class='Inputfield InputfieldConsent nb-form-required uk-grid-margin uk-first-column'
+            id='wrap_nb-form-nb-sighting_consent'>
+            <div class='nb-form-content'>
+                <div role='alert'></div>
+                <div class='uk-margin uk-grid-small uk-child-width-auto uk-grid'>
+                    <label class='uk-flex'>
+                        <input id='nb-form-nb-sighting_consent' name='consent' class='uk-checkbox InputfieldMaxWidth'
+                            title='Please check if you agree...' type='checkbox' checked>
+                        <span class='terms'>I consent to my data being used in accordance with the
+                            Orkney Native
+                            Wildlife <a class='uk-button uk-button-text' href='#'>Project Privacy
+                                Policy</a> and
+                            <a class='uk-button uk-button-text' href='#'>Terms of Service</a>.</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class='Inputfield InputfieldSubscribe nb-form-required uk-first-column'
+            id='wrap_nb-form-nb-sighting_subscribe'>
+            <div class='nb-form-content'>
+                <div role='alert'></div>
+                <div class='uk-margin uk-grid-small uk-child-width-auto uk-grid'>
+                    <label class='uk-flex'>
+                        <input id='nb-form-nb-sighting_subscribe' name='subscribe'
+                            class='uk-checkbox InputfieldMaxWidth' title='Would you like to register for email updates?'
+                            type='checkbox' checked>
+                        <span class='terms'>Would you like to register for email updates?</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <p>Please provide as much information as possible. Although some information is optional, it
+            would help us if you can provide contact details so we can contact you to verify
+            sighting information if needed.</p>
+    </fieldset>
+    {{> nbInput name="submit" type="submit" value="Send Report" style="primary" icon="arrow-right"}}
+
+    {{/inline}}
+    {{/ukGrid}}
 </form>
+
 {{/inline}}
-{{/ukContainer}}
+{{/nbForm}}
 
 {{/inline}}
 

@@ -1,0 +1,35 @@
+.stoat-map-wrap {
+    margin: 0 auto;
+    max-width: 1500px;
+    padding-top: 20px;
+
+    .uk-position-relative .uk-container {
+        padding-bottom: 25px;
+        padding-top: 30px;
+    }
+
+    .shape {
+        color: $blue-light;
+        fill: $blue-light;
+        bottom: 0;
+    }
+
+    @media (max-width: $breakpoint-small) {
+        padding-top: 0;
+
+        form>.uk-flex {
+            flex-direction: column;
+        }
+
+        .uk-button-primary {
+            min-width: 280px;
+            margin-top: 20px;
+        }
+    }
+}
+
+.map-container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}

@@ -2,6 +2,12 @@ form {
     position: relative;
     width: 100%;
 
+    *+.uk-grid-margin,
+    .uk-grid+.uk-grid,
+    .uk-grid>.uk-grid-margin {
+        margin-top: 30px;
+    }
+
     fieldset {
         border: 0;
         width: 100%;
@@ -69,7 +75,7 @@ form {
         span {
             display: block;
             background-color: $secondary;
-            box-shadow: 0 10px 21px -8px rgba(0, 0, 0, .5);
+            box-shadow: 0 10px 21px -8px rgba($black, .5);
             border-radius: 3px;
             color: $white;
             font-size: 16px;
@@ -93,16 +99,9 @@ form {
         }
     }
 
-    *+.uk-grid-margin,
-    .uk-grid+.uk-grid,
-    .uk-grid>.uk-grid-margin {
-        margin-top: 30px;
-    }
-
     .terms {
         font-size: 16px;
         color: $secondary;
-        left: 15px;
         width: 100%;
         top: -2px;
         line-height: 1.6;
@@ -127,6 +126,16 @@ form {
     .uk-select:not(.uk-form-danger):focus,
     .uk-textarea:not(.uk-form-danger):focus {
         border-color: $brown-medium;
+    }
+
+    .radio-label {
+        font-size: 16px;
+        color: $gray-soft;
+    }
+
+    .uk-text-small {
+        font-size: 14px;
+        color: $gray-soft;
     }
 
     @media (max-width: $breakpoint-large) {

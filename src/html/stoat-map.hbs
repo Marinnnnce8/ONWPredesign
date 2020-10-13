@@ -1,0 +1,64 @@
+{{#*inline "blocks"}}
+
+<section class='gateway-section'>
+    {{#> ukContainer}}
+    {{#*inline "out"}}
+    <div class='uk-width-3-4@'>
+        <h1>Stoat Map</h1>
+        <p class='uk-text-lead'>To best optimise the page and provide the visitor with useful and
+            informative text, it would be
+            good
+            to have a sentence or two included here.</p>
+    </div>
+    {{/inline}}
+    {{/ukContainer}}
+
+    <div class='stoat-map-wrap'>
+        <div class='uk-position-relative'>
+            <img class='shape' src='./img/stoat-map-year-selector-bg.svg' data-uk-svg alt='image'>
+            <div class='uk-container'>
+                <div class='nb-block nb-block-form uk-clearfix' data-nb-block='form'>
+                    <form id='nb-form-nb-stoat-map' class='uk-form-stacked InputfieldForm' method='post' data-uk-nb-form
+                        novalidate data-colspacing='1'>
+                        <div class='uk-flex uk-flex-between uk-flex-bottom'>
+                            <div class='Inputfield InputfieldYear uk-width-1-5@l uk-width-1-3@s uk-width-1-1 uk-first-column'
+                                id='wrap_nb-form-nb-stoat_map_year'>
+                                <label class='uk-form-label' for='nb-form-nb-stoat_map_year'>Year to display on
+                                    map</label>
+                                <div class='nb-form-content'>
+                                    <div role='alert'></div>
+                                    <div class='uk-inline uk-width-1-1'>
+                                        <span class='uk-form-icon uk-form-icon-flip'
+                                            data-uk-icon='triangle-down'></span>
+                                        <select id='nb-form-nb-stoat_map_year' class='uk-select'>
+                                            <option>2019</option>
+                                            <option>2018</option>
+                                            <option>2017</option>
+                                            <option>2016</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='Inputfield InputfieldSubmit uk-first-column uk-width-1-5@l uk-width-1-3@s uk-width-1-1'
+                                id='wrap_nb-form-nb-stoat_map_submit'>
+                                <div class='nb-form-content'>
+                                    <div role='alert'></div>
+                                    {{!-- <button id='nb-form-nb-stoat_map_submit'
+                                        class='uk-button uk-button-primary uk-button-large' name='submit' value='Send'
+                                        type='submit'>Report a
+                                        Sighting</button> --}}
+                                        {{> nbInput name="submit" type="submit" value="Report a Sighting" style="primary" icon="arrow-right" size="large"}}
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class='map-container'></div>
+    </div>
+</section>
+
+{{/inline}}
+
+{{> templatePage}}

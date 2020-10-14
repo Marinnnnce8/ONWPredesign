@@ -1,0 +1,23 @@
+<div class='link-box uk-card'>
+    <div class='uk-card-body uk-height-1-1 uk-flex uk-flex-column uk-light uk-text-center {{#if stoat}}uk-flex-right orkney-map{{else}}uk-flex-between{{/if}}'
+        {{#if image}}data-uk-img style="background-image: url('./img/{{image}}');"{{/if}}>
+        {{#if stoat}}
+        <span class='stoat-pin' role='presentation'>
+            <svg viewBox="0 0 24 24">
+                <use xlink:href="./symbol/icons.svg#{{stoat}}"></use>
+            </svg>
+            <span class='pulse' role='presentation'></span>
+            <span class='pulse' role='presentation'></span>
+            <span class='pulse' role='presentation'></span>
+            <span class='pulse' role='presentation'></span>
+        </span>
+        </span>
+        {{else}}
+        <svg viewBox="0 0 24 24">
+            <use xlink:href="./symbol/icons.svg#{{icon}}"></use>
+        </svg>
+        {{/if}}
+        <h3 class='uk-card-title uk-text-bold'>{{title}}</h3>
+    </div>
+    <a href='{{href}}' class='uk-position-cover' aria-label="Find out more"></a>
+</div>

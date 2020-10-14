@@ -119,6 +119,14 @@
                 width: calc(100% - 42px);
                 left: 49.7%;
             }
+
+            .uk-button-large {
+                padding: 2px 40px 1px 20px;
+
+                svg {
+                    right: 15px;
+                }
+            }
         }
 
         &.involve {

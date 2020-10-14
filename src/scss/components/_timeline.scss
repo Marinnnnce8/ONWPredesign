@@ -1,0 +1,266 @@
+.timeline-section {
+    h2 {
+        text-align: center;
+        font-weight: $bold;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-weight: $bold;
+    }
+}
+
+.timeline-inner {
+    position: relative;
+    padding: 135px 0 120px;
+
+    @media (max-width: $breakpoint-small) {
+        padding: 135px 0 120px 50px;
+
+        .uk-flex>.uk-flex {
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+.timeline-line {
+    height: 100%;
+    width: 60px;
+
+    &::after,
+    img,
+    span {
+        position: absolute;
+        left: 50%;
+    }
+
+    &::after {
+        top: 60px;
+        transform: translateX(-50%);
+        content: '';
+        background-color: $green-golden;
+        bottom: 0;
+        width: 3px;
+        height: calc(100% - 120px);
+    }
+
+    span {
+        display: block;
+        background-color: $green-golden;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+
+        &.bottom {
+            position: absolute;
+            width: 42px;
+            height: 42px;
+            transform: translate(-50%, -50%);
+            bottom: 0;
+
+            img {
+                width: 17px;
+            }
+        }
+    }
+
+    span img {
+        width: 25px;
+        height: auto;
+        top: 50%;
+        transform: translate(-65%, -50%);
+    }
+
+    @media (max-width: $breakpoint-small) {
+        left: 0;
+        transform: none;
+        width: 40px;
+
+        &::after {
+            top: 40px;
+            height: calc(100% - 90px);
+        }
+
+        span {
+            width: 40px;
+            height: 40px;
+
+            &.bottom {
+                position: absolute;
+                width: 35px;
+                height: 35px;
+                transform: translate(-50%, -50%);
+                bottom: 0;
+
+                img {
+                    width: 14px;
+                }
+            }
+        }
+
+        span img {
+            width: 16px;
+        }
+    }
+}
+
+.timeline-card {
+    max-width: 370px;
+
+    img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 5px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    @media (max-width: $breakpoint-small) {
+        max-width: 100%;
+    }
+}
+
+.timeline-date {
+    position: relative;
+    max-width: 225px;
+    width: 100%;
+
+    .num {
+        font-size: 74px;
+        font-weight: $bold;
+        color: $green-golden;
+        line-height: 1;
+
+        sup {
+            color: inherit;
+            font-weight: $light;
+        }
+    }
+
+    .date {
+        display: block;
+        font-size: 20px;
+        color: $secondary;
+    }
+
+    .timeline-line {
+        position: absolute;
+        right: 0;
+        transform: translateX(50%);
+        top: 10px;
+
+        &::after {
+            display: none;
+        }
+
+        span {
+            width: 42px;
+            height: 42px;
+
+            &::after {
+                display: block;
+                width: 30px;
+                height: 3px;
+                background-color: $gray-ice;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 100%;
+                content: '';
+                position: absolute;
+            }
+
+            img {
+                width: 17px;
+            }
+        }
+    }
+
+    &.right {
+        padding-left: 40px;
+    }
+
+    &.left {
+        padding-right: 40px;
+
+        .timeline-line {
+            right: auto;
+            left: 0;
+            transform: translateX(-50%);
+
+            span::after {
+                left: 100%;
+                right: auto;
+            }
+        }
+
+        .num,
+        .date {
+            text-align: right;
+        }
+    }
+
+    @media (max-width: $breakpoint-large) {
+        max-width: 160px;
+
+        .num {
+            font-size: 46px;
+        }
+
+        .timeline-line span::after {
+            width: 15px;
+        }
+
+        &.right {
+            padding-left: 20px;
+        }
+
+        &.left {
+            padding-right: 20px;
+        }
+    }
+
+    @media (max-width: $breakpoint-small) {
+        padding-top: 50px;
+
+        >.uk-flex {
+            flex-direction: column;
+        }
+
+        .timeline-line {
+            right: auto;
+            left: -13px;
+            top: 0;
+            transform: none;
+        }
+
+        .date {
+            font-size: 18px;
+        }
+
+        &.right {
+            padding-left: 0;
+        }
+
+        &.left {
+            padding-right: 0;
+
+            .date,
+            .num {
+                text-align: left;
+            }
+
+            .timeline-line {
+                transform: none;
+                right: auto;
+                left: -13px;
+
+                span::after {
+                    left: auto;
+                    right: 100%;
+                }
+            }
+        }
+    }
+}

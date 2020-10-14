@@ -1,0 +1,19 @@
+<div class='link-box-alt js-link-box uk-card link-box-{{color}}'>
+	{{#if category}}
+	<span class="uk-text-bold">{{category}}</span>
+	{{/if}}
+	<div class='uk-card-media-top uk-background-cover' data-src='{{src}}' data-uk-img></div>
+	<div class='uk-card-body'>
+		<div class="link-box-title uk-flex uk-flex-column uk-flex-right">
+			{{#if date}}
+			<span class="uk-text-italic">{{date}}</span>
+			{{/if}}
+			<h3 class='uk-card-title'>{{title}}</h3>
+		</div>
+		<div class='link-box-text'>
+			<p>{{text}}</p>
+			{{> ukButton link="#" label="Continue reading" style="default" icon="arrow-right" size="small"}}
+		</div>
+	</div>
+	<a href='{{href}}' class='uk-position-cover' aria-label='Continue reading'></a>
+</div>

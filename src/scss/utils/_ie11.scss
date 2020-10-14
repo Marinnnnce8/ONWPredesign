@@ -9,18 +9,8 @@ screen and (-ms-high-contrast: none) {
         background-attachment: scroll;
     }
 
-    .banner-section.home {
+    .banner.home {
         padding: 0;
-
-        h1 {
-            color: $white;
-        }
-
-        .uk-button-primary {
-            background-color: $blue-light;
-            border: 0;
-            z-index: 1;
-        }
 
         .banner-text {
             padding-top: 300px;
@@ -82,30 +72,6 @@ screen and (-ms-high-contrast: none) {
                 width: 100%;
                 left: 0;
             }
-        }
-    }
-}
-
-
-//edge
-@supports (-ms-ime-align: auto) {
-    .header {
-        background-color: $white;
-    }
-
-    .banner-section.home {
-        h1 {
-            color: $white;
-        }
-
-        .uk-button-primary {
-            background-color: $blue-light;
-            border: 0;
-            z-index: 1;
-        }
-
-        .banner-text {
-            padding-top: 300px;
         }
     }
 }

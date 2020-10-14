@@ -2,11 +2,199 @@
 
 	.header,
 	.footer,
+	.nb-block-form,
+	.nb-form,
+	.TextformatterVideoEmbed,
 	.uk-button,
 	.uk-breadcrumb,
 	.uk-pagination,
 	.uk-modal,
-	.nb-form {
+	.intro-inner,
+	.intro-left img,
+	.shape,
+	.orkney-map,
+	.wildlife-box,
+	.footer-bottom,
+	.uk-slideshow,
+	.stoat-map-wrap,
+	.uk-card-media-top,
+	.banner,
+	.wildlife-section a,
+	.links-section.involve,
+	.link-box-alt a,
+	.intro-section,
+	.uk-form-stacked .uk-form-label a,
+	.timeline-line {
 		display: none !important;
+	}
+
+	.intro-section.home,
+	.gateway-section,
+	.links-section,
+	.wildlife-section,
+	.timeline-inner {
+		padding: 0;
+	}
+
+	.wildlife-section {
+		margin-top: 0 !important;
+	}
+
+	.wildlife-inner {
+		left: auto;
+		transform: none;
+	}
+
+	.wildlife-text {
+		position: relative !important;
+		max-width: 1200px;
+		transform: none;
+		left: auto;
+		top: auto;
+		margin: 0 auto;
+	}
+
+	.gateway-section {
+
+		h1 {
+			font-size: 54px;
+		}
+
+		.uk-text-lead {
+			font-size: 28px;
+		}
+	}
+
+	.links-section {
+		.uk-grid-small {
+			margin-left: 0;
+		}
+
+		ul {
+			display: block;
+
+			li {
+				width: 100%;
+				margin: 0;
+				padding: 0;
+			}
+		}
+
+		&.gateway {
+			li {
+				width: 100% !important;
+			}
+
+			.link-box-alt {
+				clip-path: none !important;
+				min-height: 1px !important;
+
+				.uk-card-body {
+					position: relative;
+				}
+
+				.link-box-title,
+				.link-box-text {
+					padding: 10px !important;
+				}
+
+				.link-box-title {
+					margin-bottom: 0;
+				}
+
+				p {
+					margin-bottom: 5px;
+				}
+			}
+		}
+	}
+
+	.link-box {
+		min-height: 0;
+		overflow: visible;
+		clip-path: none;
+
+		.uk-card-body,
+		.link-box-text {
+			position: relative !important;
+		}
+
+		.uk-card-body {
+			padding: 0;
+
+			&::after {
+				display: none;
+			}
+		}
+
+		.link-box-text {
+			opacity: 1;
+			transform: none;
+		}
+
+		a {
+			display: none !important;
+		}
+	}
+
+	.link-box-alt {
+		.uk-card-body {
+			bottom: 0 !important;
+		}
+
+		@include hover {
+			.link-box-title {
+				padding-bottom: 25px;
+			}
+		}
+	}
+
+	.timeline-inner {
+		.uk-flex {
+			flex-direction: column;
+			justify-content: flex-start;
+		}
+
+		img {
+			display: none !important;
+		}
+
+		.uk-width-1-2\@s {
+			width: 100%;
+		}
+
+		.timeline-card,
+		.timeline-date {
+			max-width: 100%;
+		}
+
+		.timeline-date {
+			display: flex;
+			align-items: center;
+
+			&.left {
+
+				.num,
+				.date {
+					text-align: left;
+				}
+			}
+
+			&.right {
+				padding-left: 0;
+			}
+
+			.num {
+				font-size: 24px;
+			}
+
+			.date {
+				margin-left: 5px;
+			}
+		}
+
+		.uk-margin-medium {
+			margin-bottom: 0;
+		}
 	}
 }

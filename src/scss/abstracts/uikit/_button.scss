@@ -1,3 +1,8 @@
+a,
+button {
+	cursor: pointer;
+}
+
 a {
 	@include hover {
 		text-decoration: none;
@@ -54,16 +59,6 @@ a {
 // .uk-button-primary
 @mixin hook-button-primary {
 	background-color: $primary;
-
-	// &.blue {
-	// 	background-color: $blue-sky;
-	// 	color: $white;
-
-
-	// 	@include hover {
-	// 		background-color: $primary;
-	// 	}
-	// }
 }
 
 // .uk-button-primary-hover

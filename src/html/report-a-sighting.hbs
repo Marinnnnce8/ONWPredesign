@@ -3,8 +3,8 @@
 {{!-- Form --}}
 {{#> nbForm}}
 {{#*inline "form"}}
-<form id="nb-form-{{page.name}}" class="uk-form-stacked InputfieldForm uk-margin-top" method="post" data-uk-nb-form novalidate
-    data-colspacing="1">
+<form id="nb-form-{{page.name}}" class="uk-form-stacked InputfieldForm uk-margin-top" method="post" data-uk-nb-form
+    novalidate data-colspacing="1">
 
     <h2>Sighting Information</h2>
 
@@ -125,15 +125,16 @@
             {{> nbInput label="Address 2" name="address_2"}}
         </div>
 
-        <div data-uk-grid class='uk-grid-margin'>
-            <div class="uk-width-3-4@s uk-first-column">
-                {{> nbInput label="Town" name="town"}}
-            </div>
-            <div
-                class="uk-width-1-4@s uk-first-column uk-padding-small uk-padding-remove-vertical uk-padding-remove-right">
-                {{> nbInput label="Postcode" name="postcode"}}
-            </div>
+        {{#> ukGrid class="uk-grid-margin"}}
+        {{#*inline "cells"}}
+        <div class="uk-width-3-4@s uk-first-column">
+            {{> nbInput label="Town" name="town"}}
         </div>
+        <div class="uk-width-1-4@s uk-first-column uk-padding-small uk-padding-remove-vertical uk-padding-remove-right">
+            {{> nbInput label="Postcode" name="postcode"}}
+        </div>
+        {{/inline}}
+        {{/ukGrid}}
         <div class='Inputfield InputfieldConsent nb-form-required uk-grid-margin uk-first-column'
             id='wrap_nb-form-nb-sighting_consent'>
             <div class='nb-form-content'>

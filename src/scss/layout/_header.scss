@@ -52,7 +52,7 @@
 
             &:first-of-type a {
                 font-weight: $bold;
-                color: $brick;
+                color: $primary;
                 position: relative;
 
                 &::after {
@@ -62,7 +62,7 @@
                     left: 0;
                     width: 100%;
                     height: 2px;
-                    background-color: $brick;
+                    background-color: $primary;
                     opacity: 0;
                     transition: $speed $timing;
                 }
@@ -106,10 +106,10 @@
                 color: $secondary;
 
                 @include hover {
-                    color: $brick;
+                    color: $primary;
 
                     i::after {
-                        background-color: $brick;
+                        background-color: $primary;
                     }
                 }
             }
@@ -259,7 +259,7 @@
         padding: 0;
 
         @include hover {
-            color: $brick;
+            color: $primary;
             outline: none;
         }
     }
@@ -281,7 +281,7 @@
 
         @include hover {
             svg {
-                background-color: $brick;
+                background-color: $primary;
             }
         }
     }
@@ -376,7 +376,7 @@
                 a,
                 button {
                     @include hover {
-                        color: $brick;
+                        color: $primary;
                     }
                 }
             }
@@ -549,6 +549,8 @@
 .uk-modal {
     background-color: rgba($secondary, .9);
     padding: 10px;
+    width: 100%;
+    overflow-x: hidden;
 
     @media (max-width: $breakpoint-small) {
         padding: 10px;

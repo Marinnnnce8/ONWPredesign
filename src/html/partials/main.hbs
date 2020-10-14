@@ -22,7 +22,8 @@
 		<img src='./img/header-mobile-tablet.svg' data-uk-svg alt='image' class='uk-hidden@s shape'>
 		<nav class='uk-flex uk-flex-between' data-uk-navbar>
 			<a href='#' class='uk-navbar-item uk-logo'>
-				<img src="{{logo}}" alt="{{nb.siteName}} Logo">
+				<img src="{{logo}}" alt="{{nb.siteName}} Logo" class="uk-visible@m">
+				<img src="./img/logo-mobile.png" alt="{{nb.siteName}} Logo" class="uk-hidden@m">
 			</a>
 
 			<div class='uk-flex uk-flex-column'>
@@ -55,30 +56,33 @@
 	</header>
 
 	<main class="uk-margin-bottom">
+		{{#if page.shareWidget}}
+		{{> shareWidget items=items.shareWidget title="Share widget"}}
+		{{/if}}
 
 		{{> sightingButton}}
 
 		{{#if page.noBannerBreadcrumbs}}
 		{{else}}
-			{{#if page.banner}}
-			{{> banner}}
-			{{#if page.breadcrumbs}}
-			{{#> ukContainer size=(default page.ukContainer ukContainer) class="uk-margin-top"}}
-			{{#*inline "out"}}
-			{{> ukBreadcrumb }}
-			{{/inline}}
-			{{/ukContainer}}
-			{{/if}}
-			{{else}}
-			{{#> ukContainer size=(default page.ukContainer ukContainer) class="uk-margin-top"}}
-			{{#*inline "out"}}
-			<div class="no-hero">
-				<h1>{{page.h1}}</h1>
-			</div>
-			{{> ukBreadcrumb }}
-			{{/inline}}
-			{{/ukContainer}}
-			{{/if}}
+		{{#if page.banner}}
+		{{> banner}}
+		{{#if page.breadcrumbs}}
+		{{#> ukContainer size=(default page.ukContainer ukContainer) class="uk-margin-top"}}
+		{{#*inline "out"}}
+		{{> ukBreadcrumb }}
+		{{/inline}}
+		{{/ukContainer}}
+		{{/if}}
+		{{else}}
+		{{#> ukContainer size=(default page.ukContainer ukContainer) class="uk-margin-top"}}
+		{{#*inline "out"}}
+		<div class="no-hero">
+			<h1>{{page.h1}}</h1>
+		</div>
+		{{> ukBreadcrumb }}
+		{{/inline}}
+		{{/ukContainer}}
+		{{/if}}
 		{{/if}}
 
 		{{#> main }}{{/main}}

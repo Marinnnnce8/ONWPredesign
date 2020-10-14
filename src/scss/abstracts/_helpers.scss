@@ -1,22 +1,27 @@
+html,
+body {
+    overflow-x: hidden;
+}
+
 .uk-container-small {
-	max-width: 780px;
+    max-width: 780px;
 }
 
 .shape {
-	width: 100%;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-	height: 100%;
-	z-index: -1;
+    height: 100%;
+    z-index: -1;
 }
 
 .no-hero {
 
-	h1 {
-		color: $secondary;
-		margin-top: 200px;
-	}
+    h1 {
+        color: $secondary;
+        margin-top: 200px;
+    }
 }
 
 // Theming and colors iterator

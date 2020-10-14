@@ -11,7 +11,7 @@
 				{{#each this}}
 					{{#with this}}
 					<a href="{{href}}" class="gallery-image"{{#if alt}} data-alt="{{alt}}"{{/if}}{{#if caption}} data-caption="<div>{{{caption}}}</div>"{{/if}}>
-						<img src="{{{blankPixel}}}" data-src="{{src}}" alt="{{default alt ""}}" data-uk-img>
+						<img src="{{{src}}}" data-src="{{src}}" alt="{{default alt ""}}" data-uk-img>
 					</a>
 					{{/with}}
 				{{/each}}

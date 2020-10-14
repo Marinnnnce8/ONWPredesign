@@ -37,25 +37,6 @@ a {
 	}
 }
 
-// .uk-button:hover
-@mixin hook-button-hover {
-	&:not(.uk-button-text) {
-		color: $white;
-	}
-
-	&.uk-button-primary {
-		background-color: $brick;
-	}
-
-	&.uk-button-secondary {
-		background-color: $green-dark-alt;
-	}
-
-	&.uk-button-default {
-		background-color: $brown-dark;
-	}
-}
-
 // .uk-button-primary
 @mixin hook-button-primary {
 	background-color: $primary;
@@ -64,6 +45,13 @@ a {
 // .uk-button-primary-hover
 @mixin hook-button-primary-hover {
 	background-color: $brick;
+	color: $secondary;
+}
+
+// .uk-button-primary-active
+@mixin hook-button-primary-active {
+	background-color: $brick;
+	color: $secondary;
 }
 
 // .uk-button-default
@@ -75,6 +63,13 @@ a {
 // .uk-button-default-hover
 @mixin hook-button-default-hover {
 	background-color: $brown-dark;
+	color: $white;
+}
+
+// .uk-button-default-active
+@mixin hook-button-default-active {
+	background-color: $brown-dark;
+	color: $white;
 }
 
 // .uk-button-secondary
@@ -84,7 +79,12 @@ a {
 
 // .uk-button-secondary-hover
 @mixin hook-button-secondary-hover {
-	background-color: $green-dark-alt;
+	background-color: $green-alt-light;
+}
+
+// .uk-button-secondary-active
+@mixin hook-button-secondary-active {
+	background-color: $green-alt-light;
 }
 
 // .uk-button-small

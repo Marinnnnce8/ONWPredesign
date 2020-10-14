@@ -7,7 +7,7 @@
 
 .link-box {
     min-height: 320px;
-    background-color: rgba($green-dark-alt, .7);
+    background-color: rgba($green-alt, .8);
     transition: $speed $timing;
 
     h3 {
@@ -28,7 +28,7 @@
     }
 
     @include hover {
-        background-color: $brick;
+        background-color: $primary;
     }
 }
 
@@ -41,7 +41,7 @@
         left: 0;
         width: 100%;
         bottom: 0;
-        box-shadow: 0 0 90px 150px rgba($green-dark-alt, .7);
+        box-shadow: 0 0 90px 150px rgba($green-alt, .7);
         content: '';
         z-index: 10;
         pointer-events: none;
@@ -59,6 +59,10 @@
 
         .link-box-text {
             background-color: $blue-light;
+
+            p {
+                color: $secondary;
+            }
         }
     }
 
@@ -151,7 +155,7 @@
     }
 
     .link-box-text {
-        background-color: $green-dark-alt;
+        background-color: $green-alt;
         padding-right: 65px;
         padding: 25px 105px 25px 40px;
     }

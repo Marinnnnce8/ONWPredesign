@@ -137,13 +137,13 @@
 	.uk-button-text {
 		font-size: 16px;
 		font-weight: 400;
-		color: $brick;
+		color: $primary;
 		line-height: 1.1;
 
 		&::before {
 			width: 100%;
 			height: 1px;
-			background-color: $brick;
+			background-color: $primary;
 		}
 
 		@include hover {
@@ -227,7 +227,7 @@
 		transition: $speed $timing;
 
 		@include hover {
-			color: $brick;
+			color: $primary;
 		}
 	}
 

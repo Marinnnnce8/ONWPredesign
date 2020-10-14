@@ -15,37 +15,33 @@
     <div class='uk-container'>
         {{#> ukGrid class="uk-grid-match uk-grid-small uk-child-width-1-4@xl uk-child-width-1-3@m uk-child-width-1-2@s" dataUkHeightMatch=".link-box-title"}}
         {{#*inline "cells"}}
-        <li>
+        <div>
             {{> linkBox href="#" color="blue" src="./img/about-link-1.jpg" title="Our Mission" text="A short description text should gently catch the user's eye, initiating the reading of the page content."}}
-        </li>
-        <li>
+        </div>
+        <div>
             {{> linkBox href="#" color="blue" src="./img/about-link-2.jpg" title="The Project" text="A short description text should gently catch the user's eye, initiating the reading of the page content."}}
-        </li>
-        <li>
+        </div>
+        <div>
             {{> linkBox href="#" color="blue" src="./img/about-link-1.jpg" title="Native Wildlife" text="A short description text should gently catch the user's eye, initiating the reading of the page content."}}
-        </li>
-        <li>
+        </div>
+        <div>
             {{> linkBox href="#" color="blue" src="./img/about-link-2.jpg" title="Stoat Eradication" text="A short description text should gently catch the user's eye, initiating the reading of the page content."}}
-        </li>
-        <li>
+        </div>
+        <div>
             {{> linkBox href="#" color="blue" src="./img/about-link-1.jpg" title="Funders & Partners" text="A short description text should gently catch the user's eye, initiating the reading of the page content."}}
-        </li>
-        <li>
+        </div>
+        <div>
             {{> linkBox href="#" color="blue" src="./img/about-link-2.jpg" title="Resources" text="A short description text should gently catch the user's eye, initiating the reading of the page content."}}
-        </li>
-        <li>
+        </div>
+        <div>
             {{> linkBox href="#" color="blue" src="./img/about-link-2.jpg" title="Legacy" text="A short description text should gently catch the user's eye, initiating the reading of the page content."}}
-        </li>
+        </div>
         {{/inline}}
         {{/ukGrid}}
     </div>
 </section>
 
-{{/inline}}
-
-{{> templatePage}}
-
-<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 651 322' style='position:absolute;' height='0' width='0'>
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 651 322' style='position:absolute;pointer-events:none' height='0' width='0'>
     <defs>
         <clipPath id='svgPathNewsAndEvents' clipPathUnits='objectBoundingBox'
             transform='scale(0.00153609831, 0.00310559006)'>
@@ -59,3 +55,7 @@
         </clipPath>
     </defs>
 </svg>
+
+{{/inline}}
+
+{{> templatePage}}

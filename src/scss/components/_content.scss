@@ -30,7 +30,7 @@
 	p a,
 	li a {
 		font-weight: $light;
-		color: $brick;
+		color: $primary;
 		font-size: 18px;
 		vertical-align: inherit;
 		line-height: inherit;
@@ -38,7 +38,7 @@
 		display: inline-block;
 
 		&::before {
-			background-color: $brick;
+			background-color: $primary;
 			height: 1px;
 			bottom: 2px;
 			content: '';
@@ -48,7 +48,7 @@
 		}
 
 		@include hover {
-			color: $brick;
+			color: $primary;
 
 			&::before {
 				width: 100%;
@@ -70,6 +70,7 @@
 		img {
 			display: block;
 			height: auto;
+			width: 100%;
 
 			@media (max-width: $breakpoint-mobile) {
 				width: 100%;

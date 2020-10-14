@@ -90,7 +90,7 @@ form {
 
     .uk-drop-close {
         position: absolute;
-        right: 45px;
+        right: 10px;
         top: 15px;
         color: $brown-medium;
 
@@ -110,14 +110,14 @@ form {
         .uk-button-text {
             font-size: inherit;
             font-weight: inherit;
-            color: $brick;
+            color: $primary;
             vertical-align: baseline;
             line-height: inherit;
 
             &::after,
             &::before {
                 height: 1px;
-                background-color: $brick;
+                background-color: $primary;
             }
         }
     }
@@ -150,7 +150,7 @@ form {
         }
 
         .uk-drop {
-            max-width: 280px;
+            // max-width: 280px;
 
             &::after {
                 left: auto;

@@ -1,0 +1,48 @@
+<div id='menu-nav' data-uk-modal class='uk-hidden@l'>
+    <div class='uk-modal-dialog uk-modal-body uk-width-1-1'>
+        <img class='shape' src='./img/menu-dropdown.svg' data-uk-svg alt='image'>
+        <button class='uk-modal-close-default uk-position-top-right' data-uk-close
+            aria-label='Close navigation menu'></button>
+        <ul class='uk-flex uk-flex-column nav-bottom'>
+            <li class='uk-padding-small uk-padding-remove-vertical uk-hidden@s'><a href='#'>Follow us <i><svg viewBox="0 0 24 24"><use xlink:href="./symbol/icons.svg#facebook"></use></svg></i></a></li>
+            {{#each mobMenu}}
+                {{#with this}}
+                <li class="{{#if children}}uk-parent{{/if}}{{#if (eq ../page.name name)}} uk-active{{/if}}">
+                    {{#if children}}
+                    <button>{{title}}
+                        <svg viewBox="0 0 24 24">
+                            <use xlink:href="./symbol/icons.svg#chevron-right"></use>
+                        </svg>
+                    </button>
+                    {{else}}
+                    <a href='{{default url "#"}}'>{{title}}</a>
+                    {{/if}}
+                    {{#if children}}
+                    <div data-uk-dropdown='mode: click' class='uk-navbar-dropdown' id='nav-children-{{@index}}'>
+                    <img class='shape' src='./img/menu-dropdown.svg' data-uk-svg alt='image'>
+                        <ul class='uk-nav uk-navbar-dropdown-nav uk-position-z-index'>
+                            <li class='uk-hidden@l'><button data-uk-toggle='target: #nav-children-{{@index}}; animation: true'>Back
+                                <svg viewBox="0 0 24 24">
+                                    <use xlink:href="./symbol/icons.svg#chevron-left"></use>
+                                </svg></button>
+                            </li>
+                            <li class='uk-hidden@l'><span>{{title}}</span></li>
+                        {{#each children}}
+                            {{#with this}}
+                            <li>
+                                <a href="{{default url "#"}}">{{title}}</a>
+                            </li>
+                            {{/with}}
+                        {{/each}}
+                            <li class='uk-hidden@s'><a href='#'><abbr title='Frequently Asked Questions'>FAQ</abbr></a></li>
+                            <li class='uk-hidden@s'><a href='#'>Media</a></li>
+                            <li class='uk-hidden@s'><a href='#'>Contact</a></li>
+                        </ul>
+                    </div>
+                    {{/if}}
+                </li>
+                {{/with}}
+            {{/each}}
+        </ul>
+    </div>
+</div>

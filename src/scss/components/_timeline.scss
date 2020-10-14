@@ -14,7 +14,7 @@
     position: relative;
     padding: 135px 0 120px;
 
-    @media (max-width: $breakpoint-small) {
+    @media (max-width: $breakpoint-small-max) {
         padding: 135px 0 120px 50px;
 
         .uk-flex>.uk-flex {
@@ -71,7 +71,7 @@
         transform: translate(-65%, -50%);
     }
 
-    @media (max-width: $breakpoint-small) {
+    @media (max-width: $breakpoint-small-max) {
         left: 0;
         transform: none;
         width: 40px;
@@ -117,7 +117,7 @@
         font-size: 16px;
     }
 
-    @media (max-width: $breakpoint-small) {
+    @media (max-width: $breakpoint-small-max) {
         max-width: 100%;
     }
 }
@@ -221,7 +221,7 @@
         }
     }
 
-    @media (max-width: $breakpoint-small) {
+    @media (max-width: $breakpoint-small-max) {
         padding-top: 50px;
 
         >.uk-flex {

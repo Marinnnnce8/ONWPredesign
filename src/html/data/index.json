@@ -6,21 +6,143 @@
 	"ukContainer": "small",
 	"cta": "Report a Sighting",
 	"menu": [{
+			"name": "the-project",
+			"title": "The Project",
+			"children": [{
+					"name": "volunteer-with-us",
+					"title": "Volunteer with Us"
+				},
+				{
+					"name": "submit-a-sighting",
+					"title": "Submit a Sighting"
+				},
+				{
+					"name": "landowner-support",
+					"title": "Landowner Support"
+				},
+				{
+					"name": "fun-and-learning",
+					"title": "Fun and learning"
+				},
+				{
+					"name": "tour-operators-and-guides",
+					"title": "Tour operators & guides"
+				}
+			]
+		},
+		{
+			"name": "protecting-wildlife",
+			"title": "Protecting Wildlife",
+			"children": [{
+					"name": "orkney",
+					"title": "Orkney"
+				},
+				{
+					"name": "native-wildlife",
+					"title": "Native Wildlife"
+				},
+				{
+					"name": "biosecurity",
+					"title": "Biosecurity"
+				}
+			]
+		},
+		{
+			"name": "get-involved",
+			"title": "Get Involved",
+			"children": [{
+					"name": "volunteer-with-us",
+					"title": "Volunteer with Us"
+				},
+				{
+					"name": "submit-a-sighting",
+					"title": "Submit a Sighting"
+				},
+				{
+					"name": "landowner-support",
+					"title": "Landowner Support"
+				}
+			]
+		},
+		{
+			"name": "news-and-events",
+			"title": "News & Events"
+		},
+		{
+			"name": "stoat-map",
+			"title": "Stoat Map"
+		}
+	],
+	"mobMenu": [{
 			"name": "home",
-			"title": "Home",
-			"url": "home.html"
+			"title": "Home"
 		},
 		{
 			"name": "about",
 			"title": "About",
 			"children": [{
-				"name": "child",
-				"title": "Child"
-			}]
+					"name": "volunteer-with-us",
+					"title": "Volunteer with Us"
+				},
+				{
+					"name": "submit-a-sighting",
+					"title": "Submit a Sighting"
+				},
+				{
+					"name": "landowner-support",
+					"title": "Landowner Support"
+				},
+				{
+					"name": "fun-and-learning",
+					"title": "Fun and learning"
+				},
+				{
+					"name": "tour-operators-and-guides",
+					"title": "Tour operators & guides"
+				}
+			]
 		},
 		{
-			"name": "contact",
-			"title": "Contact"
+			"name": "get-involved",
+			"title": "Get Involved",
+			"children": [{
+					"name": "volunteer-with-us",
+					"title": "Volunteer with Us"
+				},
+				{
+					"name": "submit-a-sighting",
+					"title": "Submit a Sighting"
+				},
+				{
+					"name": "landowner-support",
+					"title": "Landowner Support"
+				}
+			]
+		},
+		{
+			"name": "protecting-wildlife",
+			"title": "Protecting Wildlife",
+			"children": [{
+					"name": "orkney",
+					"title": "Orkney"
+				},
+				{
+					"name": "native-wildlife",
+					"title": "Native Wildlife"
+				},
+				{
+					"name": "biosecurity",
+					"title": "Biosecurity"
+				}
+			]
+		},
+		{
+			"name": "news-and-events",
+			"title": "News & Events"
+		},
+		{
+			"name": "stoat-map",
+			"title": "Stoat Map"
 		}
 	],
 	"social": [{

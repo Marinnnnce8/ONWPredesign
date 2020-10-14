@@ -1,18 +1,29 @@
-<ul class='uk-navbar-nav' data-uk-nb-nav='back: Back'>
+<ul class='uk-flex uk-flex-middle uk-margin-remove-vertical uk-padding-remove-left nav-bottom uk-visible@l'>
 {{#each menu}}
 	{{#with this}}
 	<li class="{{#if children}}uk-parent{{/if}}{{#if (eq ../page.name name)}} uk-active{{/if}}">
-		<a href='{{default url "#"}}'>{{title}}</a>
 		{{#if children}}
-		<ul class='uk-nav' id="nav-{{ida title}}">
-		{{#each children}}
-			{{#with this}}
-			<li>
-				<a href="{{default url "#"}}">{{title}}</a>
-			</li>
-			{{/with}}
-		{{/each}}
-		</ul>
+		<button>{{title}}
+			<svg viewBox="0 0 24 24">
+				<use xlink:href="./symbol/icons.svg#chevron-down"></use>
+			</svg>
+		</button>
+		{{else}}
+		<a href='{{default url "#"}}'>{{title}}</a>
+		{{/if}}
+		{{#if children}}
+		<div data-uk-dropdown='mode: click' class='uk-navbar-dropdown uk-navbar-dropdown-bottom-left'>
+		<img class='shape' src='./img/menu-dropdown.svg' data-uk-svg alt='image'>
+			<ul class='uk-nav uk-navbar-dropdown-nav uk-position-z-index'>
+			{{#each children}}
+				{{#with this}}
+				<li>
+					<a href="{{default url "#"}}">{{title}}</a>
+				</li>
+				{{/with}}
+			{{/each}}
+			</ul>
+		</div>
 		{{/if}}
 	</li>
 	{{/with}}

@@ -12,7 +12,6 @@
 @import 'components/banner';
 @import 'components/content';
 @import 'components/gallery';
-@import 'components/slideshow';
 @import 'components/responsive';
 @import 'components/intro-section';
 @import 'components/wildlife-section';
@@ -21,6 +20,7 @@
 @import 'components/links-box';
 @import 'components/shareWidget';
 @import 'components/gateway';
+@import 'components/timeline';
 @import 'components/stoat-map';
 // +++ Generated components will be added above this line
 
@@ -28,12 +28,6 @@
 	@import 'components/nb/cookie';
 	@import 'components/nb/form';
 	@import 'components/nb/json';
-	@import 'components/nb/nav';
-	@import 'components/nb/legal';
-}
-
-.template {
-	@import 'pages/home';
 }
 
 @import 'utils/ie11';
